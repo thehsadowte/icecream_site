@@ -13,9 +13,17 @@ header {
 .header__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     padding-top: 12px;
     padding-bottom: 12px;
+
+    @media screen and (min-width:768px) {
+        padding-top: 20px;
+        padding-bottom: 6px;
+
+        justify-content: flex-start;
+    }
 }
 
 .header__logo {
@@ -23,6 +31,11 @@ header {
     display: block;
     width: 40px;
     height: 37px;
+
+    @media screen and (min-width:768px) {
+        width: 48px;
+        height: 44px;
+    }
 }
 
 
@@ -50,6 +63,7 @@ header {
     line-height: calc(39/32);
 
     color: $text-white-color;
+    transition: color linear 200ms;
 
     &:focus,
     &:hover {
@@ -61,13 +75,29 @@ header {
 
 .burger {
     z-index: 10;
+
+    color: $text-white-color;
     background-color: transparent;
     border-color: transparent;
+    transition: color linear 200ms;
+
+    &:focus,
+    &:hover {
+        color: $text-black-color;
+    }
+
+    @media screen and (min-width:768px) {
+        margin-left: auto;
+        margin-right: 32px;
+        padding: 0;
+        border: none
+    }
 }
 
 .burger__icon {
-    stroke: $text-white-color;
-    fill: $text-white-color;
+    display: block;
+    stroke: currentColor;
+    fill: currentColor;
 
     &--close {
         display: none;
@@ -79,6 +109,10 @@ header {
 }
 
 .burger.is-open>.burger__icon>.burger__icon--open {
+    display: none;
+}
+
+.burger.is-open+.menu__button--hidden {
     display: none;
 }
 
@@ -101,9 +135,14 @@ header {
     background-color: $green-color;
     opacity: 0;
     transition: transform linear 250ms 50ms, opacity linear 250ms 50ms;
+
+    @media screen and (min-width:768px) {
+        padding-top: 140px;
+        padding-bottom: 0;
+    }
 }
 
-.burger.is-open+.menu {
+.burger.is-open~.menu {
     opacity: 1;
     transform: translateX(-100%);
 }
@@ -127,7 +166,8 @@ header {
     border-radius: 10px;
     color: $text-black-color;
     background-color: $accent-color;
-    border-color: transparent;
+    border: transparent;
+    transition: color linear 200ms, background-color linear 200ms;
 
     &:hover {
         background-color: #0A8817;
@@ -143,12 +183,21 @@ header {
         background-color: #ABABAB;
         color: $text-black-color;
     }
+
+    &--hidden {
+        display: none;
+
+        @media screen and (min-width: 768px) and (max-width:1199px) {
+            display: inline-flex
+        }
+    }
 }
 
 .menu__icon {
     margin-left: 7px;
     width: 12px;
     height: 12px;
+
     fill: none;
     stroke: currentColor;
 }

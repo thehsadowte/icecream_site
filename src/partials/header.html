@@ -17,10 +17,19 @@
 
         <button class="burger" type="button" aria-expanded="false" data-menu-button aria-controls="mobile-menu">
             <svg class="burger__icon" aria-label="Перемикач мобільного меню" width="32" height="32">
-                <use class="burger__icon--close" href="/src/images/hero-images/icons.svg#burger-close"></use>
-                <use class="burger__icon--open" href="/src/images/hero-images/icons.svg#burger-open"></use>
+                <use class="burger__icon burger__icon--close" href="/src/images/hero-images/icons.svg#burger-close">
+                </use>
+                <use class="burger__icon burger__icon--open" href="/src/images/hero-images/icons.svg#burger-open"></use>
             </svg>
         </button>
+
+        <button class="menu__button menu__button--hidden" type="button"> Buy now
+            <svg class="menu__icon">
+                <use href="/src/images/hero-images/icons.svg#button-icon"></use>
+            </svg>
+        </button>
+
+
 
         <div class="menu">
             <nav class="navigation">
