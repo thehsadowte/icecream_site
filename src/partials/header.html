@@ -3,31 +3,34 @@
         <a class="header__logo" href="#">
             <picture>
                 <source
-                    srcset="./images/hero-images/mobile/logo-sm@1x.webp 1x, ./images/hero-images/mobile/logo-sm@2x.webp 2x"
-                    media='(max-width:480px)' type="image/webp">
+                    srcset="./images/hero-images/desktop/logo-lg@1x.webp 1x, ./images/hero-images/desktop/logo-lg@2x.webp 2x"
+                    media='(min-width:1200px)' type="image/webp">
                 <source
                     srcset="./images/hero-images/tablet/logo-md@1x.webp 1x, ./images/hero-images/tablet/logo-md@2x.webp 2x"
                     media='(min-width:768px)' type="image/webp">
                 <source
-                    srcset="./images/hero-images/desktop/logo-lg@1x.webp 1x, ./images/hero-images/desktop/logo-lg@2x.webp 2x"
-                    media='(min-width:1200px)' type="image/webp">
+                    srcset="./images/hero-images/mobile/logo-sm@1x.webp 1x, ./images/hero-images/mobile/logo-sm@2x.webp 2x"
+                    media='(max-width:480px)' type="image/webp">
+
+
                 <img src="./images/hero-images/mobile/logo-sm@1x.png" alt="Морозиво">
             </picture>
         </a>
 
         <button class="burger" type="button" aria-expanded="false" data-menu-button aria-controls="mobile-menu">
             <svg class="burger__icon" aria-label="Перемикач мобільного меню" width="32" height="32">
-                <use class="burger__icon burger__icon--close" href="/src/images/hero-images/icons.svg#burger-close">
+                <use class="burger__close " href="/src/images/hero-images/icons.svg#burger-close">
                 </use>
-                <use class="burger__icon burger__icon--open" href="/src/images/hero-images/icons.svg#burger-open"></use>
+                <use class="burger__open" href="/src/images/hero-images/icons.svg#burger-open"></use>
             </svg>
         </button>
 
-        <button class="menu__button menu__button--hidden" type="button"> Buy now
+        <button class="menu__button menu__hidden" type="button"> Buy now
             <svg class="menu__icon">
                 <use href="/src/images/hero-images/icons.svg#button-icon"></use>
             </svg>
         </button>
+
 
 
 
