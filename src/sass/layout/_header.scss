@@ -1,0 +1,137 @@
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+// Header
+
+header {
+    position: sticky;
+    top: -1px;
+    right: 0;
+    overflow-x: clip;
+
+    background-color: $green-color;
+}
+
+.header__logo {
+    z-index: 10;
+    display: block;
+    width: 40px;
+    height: 37px;
+}
+
+
+
+// Navigation
+.navigation__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+}
+
+.navigation__link {
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: calc(39/32);
+
+    color: $text-white-color;
+
+    &:focus,
+    &:hover {
+        color: $text-black-color;
+    }
+}
+
+// Mobile-menu
+
+.burger {
+    z-index: 10;
+}
+
+.burger__icon {
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+
+    padding-top: 100px;
+    padding-bottom: 63px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: $green-color;
+    opacity: 0;
+    transition: transform linear 250ms 50ms, opacity linear 250ms 50ms;
+}
+
+.burger.is-open+.mobile-menu {
+    opacity: 1;
+    transform: translateX(-100%);
+}
+
+.burger__icon--close {
+    display: none;
+}
+
+.burger.is-open>.burger__icon>.burger__icon--close {
+    display: block;
+}
+
+.burger.is-open>.burger__icon>.burger__icon--open {
+    display: none;
+}
+
+.mobile-menu__button {
+    display: inline !important;
+    margin-top: auto;
+    padding: 12px 34px;
+
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(17/14);
+
+    color: $text-black-color;
+    background-color: $accent-color;
+
+}

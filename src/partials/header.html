@@ -1,1 +1,37 @@
-=
+<header class="header">
+    <div class="header__container container">
+        <a class="header__logo" href="#">
+            <picture>
+                <source
+                    srcset="./images/hero-images/mobile/logo-sm@1x.webp 1x, ./images/hero-images/mobile/logo-sm@2x.webp 2x"
+                    media='(max-width:480px)' type="image/webp">
+                <source
+                    srcset="./images/hero-images/tablet/logo-md@1x.webp 1x, ./images/hero-images/tablet/logo-md@2x.webp 2x"
+                    media='(min-width:768px)' type="image/webp">
+                <source
+                    srcset="./images/hero-images/desktop/logo-lg@1x.webp 1x, ./images/hero-images/desktop/logo-lg@2x.webp 2x"
+                    media='(min-width:1200px)' type="image/webp">
+                <img src="./images/hero-images/mobile/logo-sm@1x.png" alt="Морозиво">
+            </picture>
+        </a>
+
+        <button class="burger" type="button" aria-expanded="false" data-menu-button aria-controls="mobile-menu">
+            <svg class="burger__icon" aria-label="Перемикач мобільного меню" width="32" height="32">
+                <use class="burger__icon--close" href="/src/images/hero-images/test.svg#burger2"></use>
+                <use class="burger__icon--open" href="/src/images/hero-images/test.svg#burger1"></use>
+            </svg>
+        </button>
+
+        <div class="mobile-menu">
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a class="navigation__link" href="">Home</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="">How it’s made?</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="">Our products</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu__button" type="button"> Buy now </button>
+        </div>
+    </div>
+</header>
