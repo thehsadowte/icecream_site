@@ -1,35 +1,3 @@
-ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: currentColor;
-}
-
-button {
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-}
-
-img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.header__container {
-    display: flex;
-    justify-content: space-between;
-
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-
 // Header
 
 header {
@@ -39,6 +7,15 @@ header {
     overflow-x: clip;
 
     background-color: $green-color;
+}
+
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .header__logo {
@@ -51,11 +28,17 @@ header {
 
 
 // Navigation
+
+.navigation {
+    margin-bottom: 20px;
+}
+
 .navigation__list {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
+    flex-shrink: 1;
 
 }
 
@@ -74,23 +57,40 @@ header {
     }
 }
 
-// Mobile-menu
+// Burger
 
 .burger {
     z-index: 10;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 .burger__icon {
-    fill: currentColor;
-    stroke: currentColor;
+    stroke: $text-white-color;
+    fill: $text-white-color;
+
+    &--close {
+        display: none;
+    }
 }
 
-.mobile-menu {
+.burger.is-open>.burger__icon>.burger__icon--close {
+    display: block;
+}
+
+.burger.is-open>.burger__icon>.burger__icon--open {
+    display: none;
+}
+
+// Mobile-menu
+
+.menu {
     position: absolute;
     top: 0;
     left: 100%;
     width: 100%;
     height: 100vh;
+    overflow-y: scroll;
 
     padding-top: 100px;
     padding-bottom: 63px;
@@ -103,26 +103,19 @@ header {
     transition: transform linear 250ms 50ms, opacity linear 250ms 50ms;
 }
 
-.burger.is-open+.mobile-menu {
+.burger.is-open+.menu {
     opacity: 1;
     transform: translateX(-100%);
 }
 
-.burger__icon--close {
-    display: none;
-}
-
-.burger.is-open>.burger__icon>.burger__icon--close {
-    display: block;
-}
-
-.burger.is-open>.burger__icon>.burger__icon--open {
-    display: none;
-}
-
-.mobile-menu__button {
-    display: inline !important;
+.menu__wrap {
     margin-top: auto;
+    text-align: center;
+}
+
+.menu__button {
+    display: inline-flex;
+    align-items: center;
     padding: 12px 34px;
 
     font-family: $montserrat;
@@ -131,7 +124,31 @@ header {
     font-size: 14px;
     line-height: calc(17/14);
 
+    border-radius: 10px;
     color: $text-black-color;
     background-color: $accent-color;
+    border-color: transparent;
 
+    &:hover {
+        background-color: #0A8817;
+        color: $text-black-color;
+    }
+
+    &:focus {
+        background-color: #0A8817;
+        color: $text-white-color;
+    }
+
+    &:disabled {
+        background-color: #ABABAB;
+        color: $text-black-color;
+    }
+}
+
+.menu__icon {
+    margin-left: 7px;
+    width: 12px;
+    height: 12px;
+    fill: none;
+    stroke: currentColor;
 }
