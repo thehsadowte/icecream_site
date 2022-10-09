@@ -1,0 +1,29 @@
+// Hero
+
+.hero {
+    height: 440px;
+    background-color: $green-color ;
+}
+
+.hero__container {
+    padding-top: 48px;
+}
+
+.hero__title {
+    margin-bottom: 32px;
+
+    font-family: $seymour-one;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: calc(33/26);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $text-white-color;
+    // white-space: nowrap;
+
+    &--strong {
+        font-size: 34px;
+        line-height: 96.5%;
+    }
+}
