@@ -9,6 +9,12 @@ h6,
 p {
   padding: 0;
   margin: 0;
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -17,4 +23,10 @@ body {
   line-height: calc(28/16);
   letter-spacing: 0.04em;
   color: $text-black-color;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
 }
