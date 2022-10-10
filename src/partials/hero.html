@@ -1,12 +1,51 @@
 <section class="hero">
     <div class="container hero__container">
-        <h1 class="hero__title">ice cream made with <span class="hero__title--strong">passion</span></h1>
+        <h1 class="hero__title"> ice cream made with
+            <span class="hero__title--strong">passion</span>
+        </h1>
         <ul class="hero__list">
             <li class="hero__item">
-                <a class="hero__link" href="#products">Products</a>
+                <a class="hero__link hero__link--primary" href="#products">Products</a>
             </li>
             <li class="hero__item">
-                <a class="hero__link" href="#how-its-made">How it’s made?</a>
+                <a class="hero__link hero__link--secondary" href="#how-its-made">How it’s made?</a>
             </li>
+        </ul>
+        <div class="hero__image">
+            <picture class="hero__image--icecream">
+                <source media="(min-width: 1200px)" type="image/webp"
+                    srcset="./images/hero-images/desktop/icecream-lg@1x.webp 1x, ./images/hero-images/desktop/icecream-lg@2x.webp 2x">
+                <source media="(min-width: 1200px)" type="image/png"
+                    srcset="./images/hero-images/desktop/icecream-lg@1x.png 1x, ./images/hero-images/desktop/icecream-lg@2x.png 2x">
+                <source media="(min-width: 768px)" type="image/webp"
+                    srcset="./images/hero-images/tablet/icecream-md@1x.webp 1x, ./images/hero-images/tablet/icecream-md@2x.webp 2x">
+                <source media="(min-width: 768px)" type="image/png"
+                    srcset="./images/hero-images/tablet/icecream-md@1x.png 1x, ./images/hero-images/tablet/icecream-md@2x.png 2x">
+                <source media="(max-width: 767px)" type="image/webp"
+                    srcset="./images/hero-images/mobile/icecream-sm@1x.webp 1x, ./images/hero-images/mobile/icecream-sm@2x.webp 2x">
+                <source media="(max-width: 767px)" type="image/png"
+                    srcset="./images/hero-images/mobile/icecream-sm@1x.png 1x, ./images/hero-images/mobile/icecream-sm@2x.png 2x">
+                <img src="./images/hero-images/mobile/icecream-sm@1x.png" alt="Морозиво з трьома кульками"
+                    loading="lazy">
+            </picture>
+            <picture class="hero__image--dots">
+                <source media="(min-width: 1200px)" type="image/webp"
+                    srcset="./images/hero-images/desktop/dots-lg@1x.webp 1x, ./images/hero-images/desktop/dots-lg@2x.webp 2x">
+                <source media="(min-width: 1200px)" type="image/png"
+                    srcset="./images/hero-images/desktop/dots-lg@1x.png 1x, ./images/hero-images/desktop/dots-lg@2x.png 2x">
+                <source media="(min-width: 768px)" type="image/webp"
+                    srcset="./images/hero-images/tablet/dots-md@1x.webp 1x, ./images/hero-images/tablet/dots-md@2x.webp 2x">
+                <source media="(min-width: 768px)" type="image/png"
+                    srcset="./images/hero-images/tablet/dots-md@1x.png 1x, ./images/hero-images/tablet/dots-md@2x.png 2x">
+                <source media="(max-width: 767px)" type="image/webp"
+                    srcset="./images/hero-images/mobile/dots-sm@1x.webp 1x, ./images/hero-images/mobile/dots-sm@2x.webp 2x">
+                <source media="(max-width: 767px)" type="image/png"
+                    srcset="./images/hero-images/mobile/dots-sm@1x.png 1x, ./images/hero-images/mobile/dots-sm@2x.png 2x">
+                <img src="./images/hero-images/mobile/dots-sm@1x.png" alt="Морозиво з трьома кульками" loading="lazy">
+            </picture>
+        </div>
+
+    </div>
+
     </div>
 </section>
