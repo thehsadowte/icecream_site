@@ -1,15 +1,14 @@
 // Hero
 
 .hero {
-    height: 440px;
     background-color: $green-color ;
-    position: relative;
-    // z-index: -1;
 }
 
 .hero__container {
-
-    padding-top: 48px;
+    position: relative;
+    z-index: 10;
+    height: 452px;
+    padding-top: 60px;
 }
 
 .hero__title {
@@ -47,6 +46,7 @@
     font-size: 8px;
     line-height: calc(10/8);
     letter-spacing: 0.02em;
+    transition: border-color linear 200ms, color linear 200ms;
 
     &--primary {
         width: 62px;

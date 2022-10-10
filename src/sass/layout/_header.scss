@@ -1,9 +1,7 @@
 // Header
 
 header {
-    position: sticky;
-    top: -1px;
-    right: 0;
+    position: relative;
     overflow-x: clip;
 
     background-color: $green-color;
@@ -16,23 +14,20 @@ header {
     align-items: center;
 
     padding-top: 12px;
-    padding-bottom: 12px;
 
     @media screen and (min-width:768px) {
         padding-top: 20px;
-        padding-bottom: 6px;
         justify-content: flex-start;
     }
 
     @media screen and (min-width:1200px) {
         padding-top: 8px;
-        padding-bottom: 4px;
     }
 
 }
 
 .header__logo {
-    z-index: 1000;
+    z-index: 100;
     display: block;
     width: 40px;
     height: 37px;
@@ -108,7 +103,7 @@ header {
 // Burger
 
 .burger {
-    z-index: 1000;
+    z-index: 100;
 
     color: $text-white-color;
     cursor: pointer;
@@ -166,7 +161,7 @@ header {
 
 .menu {
     position: absolute;
-    z-index: 100;
+    z-index: 50;
     top: 0;
     left: 100%;
     width: 100%;
