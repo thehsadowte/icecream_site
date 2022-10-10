@@ -7,13 +7,54 @@
 .hero__container {
     position: relative;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     height: 452px;
     padding-top: 60px;
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    background-image: url(../images/hero-images/mobile/dots-sm@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url(../images/hero-images/mobile/dots-sm@2x.png);
+    }
+
+    @media screen and (min-width:768px) {
+        background-image: url(../images/hero-images/tablet/dots-md@1x.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/hero-images/tablet/dots-md@2x.png);
+        }
+    }
+
+    @media screen and (min-width:1200px) {
+        background-image: url(../images/hero-images/desktop/dots-lg@1x.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/hero-images/desktop/dots-lg@2x.png);
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        align-items: flex-start;
+        height: 351px;
+        padding-top: 40px;
+    }
 }
 
 .hero__title {
     margin-bottom: 32px;
-    max-width: 320px;
+    max-width: 250px;
 
     font-family: $seymour-one;
     font-style: normal;
@@ -24,10 +65,23 @@
     text-transform: uppercase;
     color: $text-white-color;
 
+    @media screen and (min-width:768px) {
+        font-size: 18px;
+        line-height: calc(23/18);
+        max-width: 190px;
+    }
+
     &--strong {
         font-size: 34px;
         line-height: 96.5%;
+
+        @media screen and (min-width:768px) {
+            font-size: 24px;
+            line-height: calc(13/24);
+        }
     }
+
+
 }
 
 .hero__list {
@@ -92,6 +146,11 @@
 .hero__image {
     position: absolute;
     bottom: 0;
+    width: 100%;
+
+    @media screen and (min-width:768px) {
+        align-self: center;
+    }
 
     &--icecream {
         position: absolute;
@@ -99,5 +158,116 @@
         left: 50%;
         transform: translateX(-50%);
         filter: drop-shadow(0 0 26.8px rgba(252, 252, 252, 0.44));
+
+        @media screen and (min-width:768px) {
+            left: 54%;
+            transform: translate(0);
+        }
     }
+
+    &--scoops {
+        display: none;
+
+        position: absolute;
+        bottom: 13px;
+        left: 32px;
+
+        @media screen and (min-width:768px) {
+            display: block;
+        }
+    }
+}
+
+.hero__text {
+    display: none;
+
+    max-width: 151px;
+    margin-top: 45px;
+    margin-left: 185px;
+
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(17/12);
+    letter-spacing: normal;
+    color: $text-white-color;
+
+    @media screen and (min-width:768px) {
+        display: block;
+    }
+}
+
+.hero__meta {
+    display: none;
+
+    position: absolute;
+    top: 28px;
+    right: 32px;
+    max-width: 80px;
+
+    @media screen and (min-width:768px) {
+        display: block;
+    }
+}
+
+
+.hero__numbers {
+    @media screen and (min-width:768px) {
+        display: block;
+        margin-bottom: 4px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 25px;
+        line-height: calc(34/28);
+        text-align: right;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        color: $text-black-color;
+    }
+}
+
+.hero__info {
+    @media screen and (min-width:768px) {
+        display: block;
+        margin-bottom: 20px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: calc(10/8);
+        text-align: right;
+        text-transform: initial;
+        letter-spacing: normal;
+
+        color: $text-white-color;
+    }
+}
+
+.hero__arrow {
+
+    &:hover .hero__icon {
+        transform: scaleX(1.25);
+    }
+
+    &:focus .hero__icon {
+        transform: scaleX(1.5);
+    }
+}
+
+.hero__icon {
+    display: block;
+    margin-top: 10px;
+    width: 40px;
+    height: 20px;
+
+    transform-origin: left;
+    transition: transform linear 200ms;
+
+    fill: $text-white-color
 }
