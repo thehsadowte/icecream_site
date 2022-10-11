@@ -133,7 +133,7 @@
         color: $text-black-color;
 
         &:hover {
-            border-color: #0A8817;
+            border-color: $green-btn-color;
         }
 
         &:focus {
@@ -141,7 +141,7 @@
         }
 
         &:disabled {
-            border-color: #ABABAB;
+            border-color: $grey-btn-color
         }
 
         @media screen and (min-width:1200px) {
@@ -158,7 +158,7 @@
         color: $accent-color;
 
         &:hover {
-            color: #0A8817;
+            color: $green-btn-color;
         }
 
         &:focus {
@@ -166,7 +166,7 @@
         }
 
         &:disabled {
-            color: #ABABAB;
+            color: $grey-btn-color
         }
 
         @media screen and (min-width:1200px) {

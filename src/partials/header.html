@@ -1,5 +1,8 @@
 <header class="header">
     <div class="header__container container">
+
+        <!-- Header-logo -->
+
         <a class="header__logo" href="#">
             <picture>
                 <source
@@ -11,11 +14,11 @@
                 <source
                     srcset="./images/480/hero-images/logo-sm@1x.webp 1x, ./images/480/hero-images/logo-sm@2x.webp 2x"
                     media='(max-width:767px)' type="image/webp">
-
-
                 <img src="./images/480/hero-images/logo-sm@1x.png" alt="Морозиво">
             </picture>
         </a>
+
+        <!-- Burger -->
 
         <button class="burger" type="button" aria-expanded="false" data-menu-button aria-controls="mobile-menu">
             <svg class="burger__icon" aria-label="Перемикач мобільного меню" width="32" height="32">
@@ -25,23 +28,24 @@
             </svg>
         </button>
 
+        <!-- min-width:768 only button -->
+
         <button class="menu__button menu__hidden" type="button"> Buy now
             <svg class="menu__icon">
                 <use href="./images/icons.svg#button-icon"></use>
             </svg>
-
         </button>
 
-
-
+        <!-- mobile-menu -->
 
         <div class="menu">
             <nav class="navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a class="navigation__link" href="">Home</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="">How it’s made?</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="">Our products</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="">Contact</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#hero">Home</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#how-its-made">How it’s made?</a>
+                    </li>
+                    <li class="navigation__item"><a class="navigation__link" href="#products">Our products</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#contacts">Contact</a></li>
                 </ul>
             </nav>
             <div class="menu__wrap">
@@ -51,7 +55,6 @@
                     </svg>
                 </button>
             </div>
-
         </div>
     </div>
 </header>

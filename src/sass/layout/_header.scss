@@ -228,17 +228,17 @@ header {
     transition: color linear 200ms, background-color linear 200ms;
 
     &:hover {
-        background-color: #0A8817;
+        background-color: $green-btn-color;
         color: $text-black-color;
     }
 
     &:focus {
-        background-color: #0A8817;
+        background-color: $green-btn-color;
         color: $text-white-color;
     }
 
     &:disabled {
-        background-color: #ABABAB;
+        background-color: $grey-btn-color;
         color: $text-black-color;
     }
 
