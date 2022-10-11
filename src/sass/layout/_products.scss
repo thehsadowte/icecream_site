@@ -365,7 +365,6 @@
     height: 22px;
   }
 }
-
 // MODAl
 .backdrop {
   position: relative;
@@ -485,6 +484,10 @@
   color: $text-black-color;
 }
 
+.ingredients {
+  margin-bottom: 48px;
+}
+
 .ingredients__item {
   display: flex;
   justify-content: space-between;
@@ -498,4 +501,45 @@
 .ingredients__weight {
   font-size: 14px;
   line-height: calc(25 / 14);
+}
+
+.products-form {
+  width: 100%;
+  max-width: 368px;
+}
+
+.products-form__input {
+  padding: 11px;
+  width: 100%;
+  outline: transparent;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid $green-color;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  &--textarea {
+    margin-bottom: 32px;
+    min-height: 84px;
+    resize: none;
+  }
+  &::placeholder {
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    color: #131313;
+  }
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+
+.products-form__btn {
+  border: none;
+  outline: transparent;
+  background-color: $accent-color;
+  display: block;
+  margin: 0 auto;
+
+  font-family: $montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(17 / 14);
 }
