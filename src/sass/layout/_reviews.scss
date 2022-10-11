@@ -1,0 +1,110 @@
+@import '/node_modules/swiper/swiper-bundle.min.css';
+
+.gallery-reviews {
+  padding-bottom: 340px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-image:
+    linear-gradient(180deg, $green-color 25px, rgba(0, 0, 0, 0) 25px), url('/src/images/1200/gallary/bg-@1x.png');
+
+  @media screen and (min-width:768px) {
+    padding-bottom: 300px;
+    background-image:
+      linear-gradient(180deg, $green-color 161px, rgba(0, 0, 0, 0) 161px), url('/src/images/1200/gallary/bg-@1x.png');
+
+  }
+
+  @media screen and (min-width:1200px) {
+    padding-bottom: 200px;
+    background-image:
+      linear-gradient(180deg, $green-color 95px, rgba(0, 0, 0, 0) 95px), url('/src/images/1200/gallary/bg-@1x.png');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .gallery-reviews {
+      background-image:
+        linear-gradient(180deg, $green-color 95px, rgba(0, 0, 0, 0) 95px), url('/src/images/1200/gallary/@2x/bg-@2x.png');
+    }
+  }
+}
+
+
+
+
+
+
+
+.reviews {
+  padding-top: 80px;
+
+  @media screen and (min-width:768px) {
+    padding-top: 60px;
+  }
+
+  @media screen and (min-width:1200px) {
+    padding-top: 128px;
+  }
+}
+
+.reviews__persone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.reviews__comment {
+  max-width: 280px;
+  padding: 34px 39px;
+  margin: 32px 0;
+  background-color: $green-color;
+  color: $text-white-color;
+  border-radius: 24px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+
+  @media screen and (min-width:768px) {
+    max-width: 705px;
+    padding: 29px 80px;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width:1200px) {
+    max-width: 970px;
+    padding: 39px 74px;
+    font-size: 16px;
+  }
+}
+
+.reviews__name {
+  font-weight: 500;
+  margin-bottom: 33px;
+  font-size: 20px;
+
+  @media screen and (min-width:768px) {
+    font-size: 16px;
+  }
+}
+
+.swiper-pagination {
+  position: relative;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 9px;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $green-color;
+}
