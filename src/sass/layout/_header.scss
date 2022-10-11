@@ -1,0 +1,264 @@
+// Header
+
+header {
+    position: relative;
+    overflow-x: clip;
+
+    background-color: $green-color;
+}
+
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 12px;
+
+    @media screen and (min-width:768px) {
+        padding-top: 20px;
+        justify-content: flex-start;
+    }
+
+    @media screen and (min-width:1200px) {
+        padding-top: 8px;
+    }
+
+}
+
+.header__logo {
+    z-index: 100;
+    display: block;
+    width: 40px;
+    height: 37px;
+
+    @media screen and (min-width:768px) {
+        width: 48px;
+        height: 44px;
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 60px;
+        height: 65px;
+    }
+}
+
+
+
+// Navigation
+
+.navigation {
+    margin-bottom: 20px;
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 0;
+        margin-right: 247px;
+    }
+}
+
+.navigation__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    flex-shrink: 1;
+
+    @media screen and (min-width:1200px) {
+        flex-direction: row;
+    }
+
+}
+
+.navigation__link {
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: normal;
+    line-height: calc(39/32);
+
+    color: $text-white-color;
+    transition: color linear 200ms;
+
+    &:focus,
+    &:hover {
+        color: $text-black-color;
+    }
+
+    @media screen and (min-width:768px) {
+        font-size: 48px;
+        line-height: calc(59/48);
+    }
+
+    @media screen and (min-width:1200px) {
+        font-size: 16px;
+        line-height: calc(20/16);
+
+        &:focus,
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
+
+// Burger
+
+.burger {
+    z-index: 100;
+
+    color: $text-white-color;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+    transition: color linear 200ms;
+
+    &:focus,
+    &:hover {
+        color: $text-black-color;
+    }
+
+    @media screen and (min-width:768px) {
+        margin-left: auto;
+        margin-right: 32px;
+        padding: 0;
+        border: none
+    }
+
+    @media screen and (min-width:1200px) {
+        display: none;
+    }
+}
+
+.burger__icon {
+    display: block;
+    stroke: currentColor;
+    fill: currentColor;
+
+}
+
+.burger__close {
+    display: none;
+}
+
+.burger.is-open>.burger__icon>.burger__close {
+    display: block;
+}
+
+.burger.is-open>.burger__icon>.burger__open {
+    display: none;
+}
+
+.burger.is-open+.menu__hidden {
+    display: none;
+}
+
+.burger.is-open~.menu>.menu__wrap {
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+        display: none;
+    }
+}
+
+// Mobile-menu
+
+.menu {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+
+    padding-top: 100px;
+    padding-bottom: 63px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: $green-color;
+    opacity: 0;
+    transition: transform linear 250ms 50ms, opacity linear 250ms 50ms;
+
+    @media screen and (min-width:768px) {
+        padding-top: 140px;
+        padding-bottom: 0;
+    }
+
+    @media screen and (min-width:1200px) {
+        position: static;
+        padding: 0;
+        margin: 0;
+        margin-left: auto;
+        width: auto;
+        height: auto;
+        align-items: center;
+        opacity: 1;
+        flex-direction: row;
+        overflow-y: auto;
+    }
+}
+
+.burger.is-open~.menu {
+    opacity: 1;
+    transform: translateX(-100%);
+}
+
+.menu__wrap {
+    margin-top: auto;
+    text-align: center;
+
+}
+
+.menu__button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 34px;
+
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(17/14);
+
+    border-radius: 10px;
+    color: $text-black-color;
+    cursor: pointer;
+    background-color: $accent-color;
+    border: transparent;
+    transition: color linear 200ms, background-color linear 200ms;
+
+    &:hover {
+        background-color: $green-btn-color;
+        color: $text-black-color;
+    }
+
+    &:focus {
+        background-color: $green-btn-color;
+        color: $text-white-color;
+    }
+
+    &:disabled {
+        background-color: $grey-btn-color;
+        color: $text-black-color;
+    }
+
+}
+
+.menu__hidden {
+    @extend .menu__button;
+    display: none;
+
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+        display: inline-flex
+    }
+
+}
+
+.menu__icon {
+    margin-left: 7px;
+    width: 12px;
+    height: 12px;
+
+    fill: none;
+    stroke: currentColor;
+}
