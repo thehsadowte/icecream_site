@@ -1,4 +1,4 @@
-<section class="products">
+<section class="products" id="products">
   <div class="container">
     <p class="products__subtitle supline">100% natural</p>
     <h2 class="products__title headline">products</h2>
@@ -13,7 +13,7 @@
         </div>
         <button type="button" class="products__btn">
           <svg class="products__icon">
-            <use href="./images/products/arrow.svg#arrow"></use>
+            <use href="./images/products/sprite.svg#arrow"></use>
           </svg>
         </button>
       </li>
@@ -27,7 +27,7 @@
         </div>
         <button type="button" class="products__btn">
           <svg class="products__icon" width="40" height="15">
-            <use href="./images/products/arrow.svg#arrow"></use>
+            <use href="./images/products/sprite.svg#arrow"></use>
           </svg>
         </button>
       </li>
@@ -41,10 +41,102 @@
         </div>
         <button type="button" class="products__btn">
           <svg class="products__icon" width="40" height="15">
-            <use href="./images/products/arrow.svg#arrow"></use>
+            <use href="./images/products/sprite.svg#arrow"></use>
           </svg>
         </button>
       </li>
     </ul>
   </div>
 </section>
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="modal__close-btn" data-modal-close>
+      <svg class="modal__icon" width="11" height="11">
+        <use href="./images/products/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <h2 class="modal__title">Chololate icecream</h2>
+    <div class="modal__img-wrap">
+      <img
+        src="./images/products/modal@1x.png"
+        alt="icecream"
+        class="modal__img"
+        width="131"
+        height="131"
+      />
+    </div>
+    <ul class="info">
+      <li class="info__item">
+        kcal
+        <p class="info__descr">320</p>
+      </li>
+      <li class="info__item">
+        Prote...
+        <p class="info__descr">4g</p>
+      </li>
+      <li class="info__item">
+        Fats
+        <p class="info__descr">8,2g</p>
+      </li>
+      <li class="info__item">
+        Carbs
+        <p class="info__descr">40,4g</p>
+      </li>
+    </ul>
+    <p class="modal__subtitle">Ingredients</p>
+    <ul class="ingredients">
+      <li class="ingredients__item">
+        <p class="ingredients__text">Milk</p>
+        <p class="ingredients__text">100ml</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Belgian chocolate</p>
+        <p class="ingredients__text">20g</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Cream</p>
+        <p class="ingredients__text">150 ml</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Cocoa powder</p>
+        <p class="ingredients__text">30g</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Sugar</p>
+        <p class="ingredients__text">40g</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Vanilla sugar</p>
+        <p class="ingredients__text">10g</p>
+      </li>
+    </ul>
+    <form name="products-form">
+      <div class="main-form__wrap">
+        <label for="username" class="products-form__label"></label>
+        <input
+          class="products-form__input"
+          type="text"
+          name="username"
+          placeholder="Name"
+          id="username"
+        />
+        <label for="phone" class="products-form__label"></label>
+        <input
+          class="products-form__input"
+          type="tel"
+          name="phone"
+          placeholder="Phone"
+          id="phone"
+        />
+        <label for="comment" class="products-form__label"></label>
+        <textarea
+          class="products-form__input main-form__input--textarea"
+          name="comment"
+          placeholder="Comment"
+          id="comment"
+        ></textarea>
+      </div>
+      <button class="products-form__btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>

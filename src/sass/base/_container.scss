@@ -1,17 +1,17 @@
 .container {
-  padding: 0 10px;
+  max-width: 350px;
+  padding: 0 15px;
   margin: 0 auto;
-  width: 100%;
+
   @media screen and(min-width: 480px) {
-    width: 480px;
-    padding: 0 20px;
+    max-width: 510px;
   }
+
   @media screen and(min-width: 768px) {
-    width: 768px;
-    padding: 0 32px;
+    max-width: 798px;
   }
+
   @media screen and(min-width: 1200px) {
-    width: 1200px;
-    padding: 0 16px;
+    max-width: 1230px;
   }
-}
+}і
