@@ -51,8 +51,9 @@
         padding-top: 40px;
     }
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:1200px) {
         height: 591px;
+        padding-top: 45px;
     }
 }
 
@@ -95,8 +96,6 @@
             line-height: calc(48/38);
         }
     }
-
-
 }
 
 .hero__list {
@@ -113,7 +112,7 @@
     justify-content: center;
     align-items: center;
 
-    font-family: 'Montserrat';
+    font-family: $montserrat;
     font-style: normal;
     font-weight: 600;
     font-size: 8px;
@@ -150,7 +149,6 @@
             height: 42px;
             border-radius: 10px;
         }
-
     }
 
     &--secondary {
@@ -176,7 +174,6 @@
             height: 40px;
         }
     }
-
 }
 
 .hero__image {
@@ -204,12 +201,16 @@
     &--scoops {
         display: none;
 
-        position: absolute;
-        bottom: 13px;
-        left: 32px;
-
         @media screen and (min-width:768px) {
+            position: absolute;
+            bottom: 13px;
+            left: 32px;
             display: block;
+        }
+
+        @media screen and (min-width:1200px) {
+            bottom: 65px;
+            left: 17px;
         }
     }
 }
@@ -218,20 +219,30 @@
     display: none;
 
     max-width: 151px;
-    margin-top: 45px;
-    margin-left: 185px;
+    position: absolute;
+    bottom: 25px;
+    left: 215px;
 
-
-    font-family: 'Montserrat';
+    font-family: $montserrat;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: calc(17/12);
     letter-spacing: normal;
+
     color: $text-white-color;
 
     @media screen and (min-width:768px) {
         display: block;
+    }
+
+    @media screen and (min-width:1200px) {
+        bottom: 100px;
+        left: 255px;
+        max-width: 200px;
+
+        font-size: 14px;
+        line-height: calc(20/14);
     }
 }
 
@@ -246,42 +257,61 @@
     @media screen and (min-width:768px) {
         display: block;
     }
+
+    @media screen and (min-width:1200px) {
+        top: 56px;
+        right: 16px;
+    }
 }
 
 
 .hero__numbers {
+    display: none;
+    margin-bottom: 4px;
+
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: calc(34/28);
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $text-black-color;
+
     @media screen and (min-width:768px) {
         display: block;
-        margin-bottom: 4px;
+    }
 
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 25px;
-        line-height: calc(34/28);
-        text-align: right;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-
-        color: $text-black-color;
+    @media screen and (min-width:1200px) {
+        font-size: 46;
+        line-height: calc(56/46);
     }
 }
 
 .hero__info {
+    display: none;
+    margin-bottom: 20px;
+
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: calc(10/8);
+    text-align: right;
+    text-transform: initial;
+    letter-spacing: normal;
+
+    color: $text-white-color;
+
     @media screen and (min-width:768px) {
         display: block;
-        margin-bottom: 20px;
+    }
 
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 8px;
-        line-height: calc(10/8);
-        text-align: right;
-        text-transform: initial;
-        letter-spacing: normal;
-
-        color: $text-white-color;
+    @media screen and (min-width:1200px) {
+        font-size: 14;
+        line-height: calc(17/14);
     }
 }
 
