@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ice cream</title>
+  <link rel="icon" href="./images/favicon.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Seymour+One&display=swap"
     rel="stylesheet" />
@@ -19,11 +21,18 @@
     <include src="./partials/products.html"></include>
     <include src="./partials/about.html"></include>
     <include src="./partials/advantages.html"></include>
-    <include src="./partials/gallery.html"></include>
-    <include src="./partials/reviews.html"></include>
+    <div class="gallery-reviews">
+      <include src="./partials/gallery.html"></include>
+      <include src="./partials/reviews.html"></include>
+    </div>
     <include src="./partials/contacts.html"></include>
   </main>
   <include src="./partials/footer.html"></include>
+  <!-- modal -->
+  <include src="./partials/modal-header.html"></include>
+  <include src="./partials/modal-products.html"></include>
+  <include src="./partials/modal-about.html"></include>
+  <include src="./partials/modal-contacts.html"></include>
 </body>
 
 </html>

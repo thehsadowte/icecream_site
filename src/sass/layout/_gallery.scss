@@ -1,0 +1,35 @@
+.gallary {
+  position: relative;
+  margin: 0 auto;
+
+  @media screen and (min-width:480px) {
+    max-width: 280px;
+  }
+
+  @media screen and (min-width:768px) {
+    max-width: 704px;
+  }
+
+  @media screen and (min-width:1200px) {
+    max-width: 1013px;
+  }
+}
+
+.gallary__thumb {
+  max-width: 1013px;
+  max-height: 422px;
+
+  .gallary__img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px;
+
+    @media screen and (min-width:768px) {
+      border-radius: 18px;
+    }
+
+    @media screen and (min-width:1200px) {
+      border-radius: 24px;
+    }
+  }
+}
