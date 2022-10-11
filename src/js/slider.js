@@ -1,9 +1,9 @@
 import Swiper, { Autoplay, Pagination, EffectFade } from 'swiper';
 
+Swiper.use([Autoplay, Pagination, EffectFade]);
+
 const swiper = new Swiper('.gallary', {
   direction: 'horizontal',
-  loop: true,
-  slidesPerView: 'auto',
   autoplay: {
     delay: 3500,
     disableOnInteraction: false,
@@ -12,6 +12,7 @@ const swiper = new Swiper('.gallary', {
   modules: [Autoplay, EffectFade],
   effect: 'fade',
   fadeEffect: { crossFade: true },
+  allowTouchMove: false,
 });
 
 const slider = new Swiper('.reviews__container-slider', {
@@ -22,4 +23,7 @@ const slider = new Swiper('.reviews__container-slider', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  nested: true,
+  rewind: true,
+  spaceBetween: 50,
 });
