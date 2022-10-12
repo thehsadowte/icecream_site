@@ -1,10 +1,7 @@
 .gallary {
   position: relative;
   margin: 0 auto;
-
-  @media screen and (min-width:480px) {
-    max-width: 280px;
-  }
+  max-width: 280px;
 
   @media screen and (min-width:768px) {
     max-width: 704px;
@@ -16,6 +13,7 @@
 }
 
 .gallary__thumb {
+
   max-width: 1013px;
   max-height: 422px;
 
@@ -32,4 +30,36 @@
       border-radius: 24px;
     }
   }
+}
+
+.modal-location {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  padding: 32px 60px;
+  max-width: 568px;
+  width: 100%;
+
+  background-color: #fcfcfc;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.modal-location__container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-location__headline {
+  font-size: 20px;
+  font-family: $seymour-one;
+}
+
+.modal-location__iframe {
+  border: none;
+  margin: 32px 0;
 }
