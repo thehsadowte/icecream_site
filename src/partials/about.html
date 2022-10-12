@@ -1,0 +1,125 @@
+<section class="about__section" id="how-its-made">
+  <div class="container">
+    <div class="about__title-container">
+      <p class="title__text">tradition and love</p>
+      <h1 class="about__title">how it’s made?</h1>
+    </div>
+    <div class="about__wrapper">
+      <div class="about__image-wrapper">
+        <picture class="cow-image">
+          <source
+            media="(min-width: 1200px)"
+            type="image/webp"
+            srcset="./images/1200/about/cow_large.webp"
+          />
+          <source
+            media="(min-width: 1200px)"
+            type="image/png"
+            srcset="
+              ./images/1200/about/cow_large-@1x.png 1x,
+              ./images/1200/about/cow_large-@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            type="image/png"
+            srcset="
+              ./images/768/about/cow_mid-@1x.png 1x,
+              ./images/768/about/cow_mid-@2x.png 2x
+            "
+          />
+          <source
+            media="(max-width: 767px)"
+            type="image/png"
+            srcset="
+              ./images/480/about/cow_sm-@1x.png 1x,
+              ./images/480/about/cow_sm-@2x.png 2x
+            "
+          />
+          <img
+            src="./images/480/about/cow_sm-@1x.png"
+            alt="Корова"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+      <div class="about__text-container">
+        <p class="about__text">
+          Ice is a place where you will become not only a little happier, but
+          also healthier. Health is the main value for us, and we follow it when
+          creating our handmade desserts.
+        </p>
+        <p class="about__text">
+          We use traditional recipes and 100% natural ingredients. Our products
+          are so natural that they can be given to children from the age of
+          three years. Sweets lovers can expect 55 types of ice cream, 15 types
+          of coffee and 23 milkshakes.
+        </p>
+        <p class="about__text--aditional">
+          This is enough to choose ice cream and coffee for any mood!
+        </p>
+        <button class="about__btn" type="button" data-modal-open>
+          Read more
+          <svg class="arrow-icon" height="12" width="12">
+            <use href="./images/icons.svg#icon-about-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="about__icons container">
+      <ul class="icons__list">
+        <li class="icons__item">
+          <svg class="icons__svg" width="50" height="50">
+            <use href="./images/icons.svg#icon-cow"></use>
+          </svg>
+          <p class="icons__numbers">721</p>
+          <p class="icons__text">
+            Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+          </p>
+        </li>
+        <li class="icons__item">
+          <svg class="icons__svg" width="50" height="50">
+            <use href="./images/icons.svg#icon-weight"></use>
+          </svg>
+          <p class="icons__numbers">16kg</p>
+          <p class="icons__text">
+            Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+          </p>
+        </li>
+        <li class="icons__item">
+          <svg class="icons__svg" width="50" height="50">
+            <use href="./images/icons.svg#icon-ice-crema"></use>
+          </svg>
+          <p class="icons__numbers">84</p>
+          <p class="icons__text">
+            Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="about__modal">
+      <button class="modal__close" data-modal-close>
+        <svg class="close-btn">
+          <use href="./images/icons.svg#icon-close_btn"></use>
+        </svg>
+      </button>
+      <h1 class="modal__caption">How it's made?</h1>
+      <iframe
+        class="modal__video"
+        width="224"
+        height="199"
+        src="https://www.youtube.com/embed/EV_vT0Vud5Q"
+        title="Ой у лузі червона калина"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p class="modal__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      </p>
+    </div>
+  </div>
+</section>
