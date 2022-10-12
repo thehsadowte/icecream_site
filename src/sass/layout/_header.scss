@@ -268,28 +268,32 @@ header {
 
 
 
-// .header__backdrop {
-//     z-index: 100;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(0, 0, 0, 0.2);
-//     transition: opacity linear 250ms, visibility linear 250ms;
-//     // overflow: hidden;
+.header__backdrop {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity linear 250ms, visibility linear 250ms;
+    // overflow: hidden;
 
-//     &.is-hidden {
-//         opacity: 0;
-//         visibility: hidden;
-//         pointer-events: none;
-//     }
-// }
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
 
 
 .header-modal {
     position: relative;
-    margin: 0 auto;
+    top: 30px;
+    left: 50%;
+    transform: translatex(-50%);
+
+
     padding: 28px 30px;
     width: 280px;
     height: 986px;
@@ -298,13 +302,16 @@ header {
     border: 2px solid $accent-color;
     border-radius: 10px;
 
-    // overflow-y: scroll;
+    overflow-y: scroll;
 
 
     @media screen and (min-width:768px) {
+        top: 50%;
+        transform: translate(-50%, -50%);
         padding: 32px 54px;
         width: 568px;
         height: 644px;
+        overflow-y: hidden;
     }
 }
 
@@ -333,6 +340,11 @@ header {
     border: none;
     cursor: pointer;
     transition: color linear 200ms;
+
+    @media screen and(min-width:768px) {
+        top: 20px;
+        right: 20px;
+    }
 
     &:hover,
     &:focus {
