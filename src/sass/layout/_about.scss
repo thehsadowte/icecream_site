@@ -335,13 +335,14 @@
   background-color: #00000033;
 }
 
-.is-hidden {
+.backdrop .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
 .about__modal {
+  z-index: 100;
   position: absolute;
   padding: 28px 28px;
   top: 50%;

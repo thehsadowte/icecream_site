@@ -11,6 +11,6 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
-    refs.body.classList.toggle('overflow')
+    refs.body.classList.toggle('overflow');
   }
 })();
