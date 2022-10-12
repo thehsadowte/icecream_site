@@ -1,0 +1,228 @@
+.locations {
+    position: relative;
+    background: $green-color;
+}
+
+.locations__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.locations__wrap {
+    position: absolute;
+    top: -96px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.locations__cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        column-gap: 16px;
+        flex-direction: row;
+        row-gap: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        column-gap: 32px;    
+    }
+}
+
+.locations__card {
+    background: $additional-white-color;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    width: 100%;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        padding: 40px 24px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 40px; 
+    }
+}
+
+.locations__card-title {
+    background: $accent-color;
+    border-radius: 6px;
+    height: 16px;
+    width: max-content;
+    padding: 0 22.25px 0 22.25px;
+    font-weight: 500;
+    line-height: 1.86;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        height: 28px;
+        padding: 0 13.28px 0 13.28px;
+    }
+}
+
+.locations__address {
+    border-bottom: 1px solid $cards-border-color;
+    padding: 20px 0 24px 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 32px 0 32px 0;
+    }
+}
+
+.locations__city {
+    font-style: normal;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.86;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 12px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 8px;
+    }
+}
+
+.locations__link {
+    font-weight: 500;
+    line-height: 1.83;
+    color: $burgundy-product-color;
+    font-style: normal;
+}
+
+.locations__schedule {
+    display: block;
+    border-bottom: 1px solid $cards-border-color;
+    padding: 24px 0 24px 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 32px 0 32px 0;
+    }
+}
+
+.locations__schedule-days {
+    font-weight: 500;
+    line-height: 1.86;
+}
+
+.locations__schedule-time {
+    font-weight: 500;
+    line-height: 1.86;
+    color: $grey-btn-color;
+    
+    &--indent {
+        margin-bottom: 8px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+.locations__contacts {
+    padding-top: 24px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 32px;
+    }
+}
+
+.locations__contacts-link {
+    font-weight: 500;
+    line-height: 1.83;
+    color: $text-black-color;
+}
+
+.locations__buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    padding: 32px 0 39px 0;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        row-gap: 0px;
+        column-gap: 16px;
+        padding: 60px 0 40px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 64px 0 120px 0;   
+    }
+}
+
+.locations__location-btn {
+    background: $accent-color;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    color: $text-black-color;
+    width: 196px;
+    height: 42px;
+    transition: background linear 200ms, color linear 200ms;
+
+    &:hover {
+        background: $green-btn-color;
+    }
+
+    &:focus {
+        background: $green-btn-color;
+        color: $text-white-color;
+    }
+
+    &:disabled {
+        background: $grey-btn-color;
+    }
+}
+
+.locations__franchise-btn {
+    border: 2px solid $accent-color;
+    border-radius: 10px;
+    background: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-black-color;
+    cursor: pointer;
+    width: 196px;
+    height: 42px;
+    transition: border linear 200ms, color linear 200ms;
+
+    &:hover {
+        border: 2px solid $green-btn-color;
+    }
+
+    &:focus {
+        border: 2px solid $green-btn-color;
+        color: $text-white-color;
+    }
+
+    &:disabled {
+        border: 2px solid $grey-btn-color;
+    }
+}
