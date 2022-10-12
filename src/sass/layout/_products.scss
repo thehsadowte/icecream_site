@@ -372,6 +372,7 @@
   position: relative;
   position: fixed;
   z-index: 100;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   width: 100%;
@@ -389,9 +390,10 @@
 .overflow {
   overflow: hidden;
 }
+
 .modal-products {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 280px;
@@ -402,6 +404,9 @@
   @media screen and (min-width: 768px) {
     width: 568px;
     padding: 30px 38px 30px 38px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: 70%;
   }
 }
 
