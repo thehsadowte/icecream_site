@@ -78,7 +78,7 @@ header {
     line-height: calc(39/32);
 
     color: $text-white-color;
-    transition: color linear 200ms;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 
     &:focus,
     &:hover {
@@ -110,7 +110,7 @@ header {
     cursor: pointer;
     background-color: transparent;
     border-color: transparent;
-    transition: color linear 200ms;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 
     &:focus,
     &:hover {
@@ -167,7 +167,7 @@ header {
     left: 100%;
     width: 100%;
     height: 100vh;
-    // overflow-y: scroll;
+    overflow-y: scroll;
 
     padding-top: 100px;
     padding-bottom: 63px;
@@ -177,7 +177,7 @@ header {
 
     background-color: $green-color;
     opacity: 0;
-    transition: transform linear 250ms 50ms, opacity linear 250ms 50ms;
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 250ms 50ms, opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms 50ms;
 
     @media screen and (min-width:768px) {
         padding-top: 140px;
@@ -194,6 +194,7 @@ header {
         align-items: center;
         opacity: 1;
         flex-direction: row;
+        overflow-y: auto;
     }
 }
 
@@ -224,7 +225,7 @@ header {
     cursor: pointer;
     background-color: $accent-color;
     border: transparent;
-    transition: color linear 200ms, background-color linear 200ms;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1) 200ms, background-color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 
     &:hover {
         background-color: $green-btn-color;
@@ -275,12 +276,10 @@ header {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    transition: opacity linear 250ms, visibility linear 250ms;
-    // overflow: hidden;
+    transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
     &.is-hidden {
         opacity: 0;
-        visibility: hidden;
         pointer-events: none;
     }
 }
@@ -290,7 +289,7 @@ header {
     position: relative;
     top: 30px;
     left: 50%;
-    transform: translatex(-50%);
+    transform: translatex(-50%) scale(1);
 
 
     padding: 28px 30px;
@@ -303,6 +302,7 @@ header {
     border-radius: 10px;
 
     overflow-y: scroll;
+    transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
 
     @media screen and (min-width:768px) {
@@ -312,7 +312,12 @@ header {
         max-width: 568px;
         width: 100%;
         height: 644px;
+
         overflow-y: hidden;
+    }
+
+    .header__backdrop.is-hidden & {
+        opacity: 0;
     }
 }
 
@@ -340,7 +345,7 @@ header {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    transition: color linear 200ms;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 
     @media screen and(min-width:768px) {
         top: 20px;
@@ -407,7 +412,7 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    transition: background-color linear 200ms;
+    transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 
     cursor: pointer;
 
@@ -512,7 +517,7 @@ header {
     background: rgba(248, 210, 78, 0.1);
     border: 1px solid #84A178;
     border-radius: 10px;
-    transition: box-shadow linear 200ms, border-color linear 200ms;
+    transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 200ms, border-color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
     outline: transparent;
 
     @media screen and(min-width:768px) {
@@ -561,7 +566,7 @@ header {
     border: transparent;
     outline: none;
     cursor: pointer;
-    transition: color linear 200ms, background-color linear 200ms;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1) 200ms, background-color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 
     @media screen and(min-width:768px) {
         font-size: 14;
