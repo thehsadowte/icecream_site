@@ -12,6 +12,9 @@ p {
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 a {
   text-decoration: none;
@@ -23,6 +26,7 @@ body {
   line-height: calc(28/16);
   letter-spacing: 0.04em;
   color: $text-black-color;
+
 }
 
 img {
