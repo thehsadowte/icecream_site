@@ -1,12 +1,14 @@
-<div class="header__backdrop">
+<div class="header__backdrop is-hidden">
     <div class="header-modal">
         <form class="header-modal__form">
 
             <!-- Modal close button -->
 
-            <svg class="header-modal__icon">
-                <use></use>
-            </svg>
+            <button class="header-modal__close-button" type="button" data-headermodal-close>
+                <svg class="header-modal__icon">
+                    <use href="./images/icons.svg#close"></use>
+                </svg>
+            </button>
 
 
             <!-- Modal title -->
@@ -21,7 +23,7 @@
                         value="icecream">
                     <label class="header-modal__label header-modal__label--icecream" for="icecream">
                         <span class="header-modal__image">
-                            <img src="./images/480/modal-header/first@1x.png" alt="Морозиво"
+                            <img src="./images/480/modal-header/first@1x.png" alt="Морозиво" loading="lazy"
                                 srcset="./images/480/modal-header/first@1x.png 1x, ./images/480/modal-header/first@2x.png 2x">
                         </span>
                         <span class="header-modal__ellipse header-modal__ellipse--icecream"></span>
@@ -33,7 +35,7 @@
                         id="icecoffee" value="icecoffee">
                     <label class="header-modal__label header-modal__label--icecoffee" for="icecoffee">
                         <span class="header-modal__image">
-                            <img src="./images/480/modal-header/second@1x.png" alt="Айс кава"
+                            <img src="./images/480/modal-header/second@1x.png" alt="Айс кава" loading="lazy"
                                 srcset="./images/480/modal-header/second@1x.png 1x, ./images/480/modal-header/second@2x.png 2x">
                         </span>
                         <span class="header-modal__ellipse header-modal__ellipse--icecoffee"></span>
@@ -44,7 +46,7 @@
                         id="milkshake" value="milkshake">
                     <label class="header-modal__label header-modal__label--milkshake" for="milkshake">
                         <span class="header-modal__image">
-                            <img src="./images/480/modal-header/third@1x.png" alt="Молочний коктейль"
+                            <img src="./images/480/modal-header/third@1x.png" alt="Молочний коктейль" loading="lazy"
                                 srcset="./images/480/modal-header/third@1x.png 1x, ./images/480/modal-header/third@2x.png 2x">
                         </span>
                         <span class="header-modal__ellipse header-modal__ellipse--milkshake"></span>

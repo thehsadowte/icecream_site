@@ -268,37 +268,37 @@ header {
 
 
 
+.header__backdrop {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity linear 250ms, visibility linear 250ms;
+    overflow: hidden;
 
-// .header__backdrop {
-//     z-index: 100;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(0, 0, 0, 0.2);
-//     transition: opacity linear 250ms, visibility linear 250ms;
-//     overflow: hidden;
-
-//     &.is-hidden {
-//         opacity: 0;
-//         visibility: hidden;
-//         pointer-events: none;
-//     }
-// }
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
 
 
 .header-modal {
-
-    // overflow-y: scroll;
+    position: relative;
     margin: 0 auto;
     padding: 28px 30px;
     width: 280px;
     height: 986px;
-    background: #FCFCFC;
-    border: 2px solid #F8D24E;
+
+    background: $text-white-color;
+    border: 2px solid $accent-color;
     border-radius: 10px;
 
+    // overflow-y: scroll;
 }
 
 .header-modal__form {
@@ -307,34 +307,75 @@ header {
     align-items: center;
 }
 
+// Modal close button
+
+.header-modal__close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 16px;
+    height: 16px;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color linear 200ms;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.header-modal__icon {
+    display: block;
+    width: 11px;
+    height: 11px;
+    fill: currentColor;
+}
+
+// Modal title
+
 .header-modal__title {
     margin-bottom: 84px;
-    font-family: 'Seymour One';
+
+    font-family: $seymour-one;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
 
-    color: #131313;
+    color: $text-black-color;
 }
 
+// Modal checkboxes with pictures
+
 .header-modal__list {
+    margin-bottom: 24px;
+
     display: flex;
     flex-direction: column;
     gap: 84px;
-    margin-bottom: 24px;
 }
 
 .header-modal__label {
     position: relative;
+    width: 132px;
+    height: 136px;
+    padding-bottom: 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: 20px;
-    width: 132px;
-    height: 136px;
+
     cursor: pointer;
 
     &:focus,
@@ -349,16 +390,23 @@ header {
     }
 
     &--icecoffee {
-        border: 2px solid #EFD478;
+        border: 2px solid $yellow-product-color;
         box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
         border-radius: 15.7808px;
     }
 
     &--milkshake {
-        border: 2px solid #D6936D;
+        border: 2px solid $burgundy-product-color;
         filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
         border-radius: 15.7808px;
     }
+}
+
+.header-modal__image {
+    position: absolute;
+    top: calc(-50% - 7px);
+    z-index: 1;
+    width: 132px;
 }
 
 .header-modal__ellipse {
@@ -367,6 +415,7 @@ header {
 
     width: 132px;
     height: 132px;
+
     border-radius: 50%;
 
     &--icecream {
@@ -386,36 +435,32 @@ header {
 }
 
 .header-modal__subtitle {
-    font-family: 'Montserrat';
+    font-family: $montserrat;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 20px;
+    line-height: calc(20/16);
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-    color: #131313;
+    color: $text-black-color;
 }
 
-.header-modal__image {
-    position: absolute;
-    top: calc(-50% - 7px);
-    z-index: 1;
-    width: 132px;
-}
+// Modal form-inputs
 
 .header-modal__input {
     width: 100%;
     padding: 7px 12px;
     margin-bottom: 12px;
-    font-family: 'Montserrat';
+
+    font-family: $montserrat;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 140%;
-    /* or 17px */
-    color: #131313;
+    line-height: calc(17/12);
+
+    color: $text-black-color;
     background: rgba(248, 210, 78, 0.1);
     border: 1px solid #84A178;
     border-radius: 10px;
@@ -424,34 +469,34 @@ header {
 
     &:hover,
     &:focus {
-        border-color: #f8d24e;
+        border-color: $accent-color;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
     &--textarea {
-        resize: none;
-        height: 65px;
         margin-bottom: 24px;
-
-
+        height: 65px;
+        resize: none;
     }
 }
 
+// Modal submit button
 
 .header-modal__button {
     padding: 13px 34px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
+
     display: flex;
     align-items: center;
     text-align: center;
 
-    color: #131313;
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(15/12);
 
-    background: #F8D24E;
+    color: $text-black-color;
+    background: $accent-color;
     border-radius: 10px;
     border: transparent;
     outline: none;
