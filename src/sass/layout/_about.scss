@@ -11,6 +11,9 @@
   line-height: calc(38 / 30);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  @media only screen and (max-width: 767px) {
+    max-width: 210px;
+  }
 
   @media screen and (min-width: 768px) {
     font-size: 34px;
@@ -217,8 +220,6 @@
   font-weight: 600;
   cursor: pointer;
 
-  border: 1px solid #000000;
-
   transition: drop-shadow 250ms ease-in, background-color 250ms linear,
     color 250ms ease-out;
 
@@ -251,6 +252,7 @@
   height: 12px;
   stroke: #000000;
   fill: none;
+  transition: stroke 250ms ease-out;
 }
 
 .about__icons {
