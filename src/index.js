@@ -1,9 +1,3 @@
-
-
-import './js/mobile-menu'
-
-import './js/slider'
-
-
-
-import './js/header-modal'
+import './js/mobile-menu';
+import './js/slider';
+import './js/modal';
