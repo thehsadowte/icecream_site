@@ -1,0 +1,53 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal-franchise">
+    <button type="button" class="modal-franchise__close-btn" data-modal-close>
+      <svg class="modal-franchise__icon" width="11" height="11">
+        <use href="./images/icons.svg#close"></use>
+      </svg>
+    </button>
+    <h2 class="modal-franchise__title">
+      Thank you for your interest in owning an Ice Cream shop
+    </h2>
+    <p class="modal-franchise__descr">
+      Due to the overwhelming volume of franchise requests we are not accepting
+      new franchisee applications at this time. Once the application process
+      resumes, we will contact you for further information. Please fill out the
+      contact information below and we will reach out for additional
+      information. We appreciate your patience.
+    </p>
+    <form name="franchise-form">
+      <label for="username" class="franchise-form__label"></label>
+      <input
+        class="franchise-form__input"
+        type="text"
+        name="username"
+        placeholder="Name"
+        id="username"
+      />
+      <label for="phone" class="franchise-form__label"></label>
+      <input
+        class="franchise-form__input"
+        type="tel"
+        name="phone"
+        placeholder="Phone"
+        id="phone"
+      />
+      <label for="email" class="franchise-form__label"></label>
+      <input
+        class="franchise-form__input"
+        type="email"
+        name="email"
+        placeholder="Email"
+        id="email"
+      />
+      <label for="comment" class="franchise-form__label"></label>
+      <textarea
+        class="franchise-form__input franchise-form__input--textarea"
+        name="comment"
+        placeholder="Comment"
+        id="comment"
+      ></textarea>
+      <button class="franchise-form__btn main-btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
