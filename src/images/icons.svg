@@ -61,4 +61,8 @@
 </symbol>
 
 </defs>
+
+    <symbol id="marker" viewBox="0 0 7 10" fill="none">
+        <path d="M1 1L5.95 5L1 9" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol> 
 </svg>
