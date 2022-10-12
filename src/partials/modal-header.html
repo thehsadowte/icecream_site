@@ -1,40 +1,67 @@
 <div class="header__backdrop">
-    <div class="header__modal">
-        <form>
-            <p class="modal__title">Buy now</p>
-            <ul class="modal__list">
-                <li class="modal__item">
-                    <input class="modal__checkbox visually-hidden" type="checkbox" name="icecream" id="icecream"
+    <div class="header-modal">
+        <form class="header-modal__form">
+
+            <!-- Modal close button -->
+
+            <svg class="header-modal__icon">
+                <use></use>
+            </svg>
+
+
+            <!-- Modal title -->
+
+            <p class="header-modal__title">Buy now</p>
+
+            <!-- Modal checkboxes with pictures -->
+
+            <ul class="header-modal__list">
+                <li class="header-modal__item">
+                    <input class="header-modal__checkbox visually-hidden" type="checkbox" name="icecream" id="icecream"
                         value="icecream">
-                    <label class="modal__label modal__label--icecream" for="icecream">
-                        <span class="modal__image">
-                            <img src="" alt="" srcset="">
+                    <label class="header-modal__label header-modal__label--icecream" for="icecream">
+                        <span class="header-modal__image">
+                            <img src="./images/480/modal-header/first@1x.png" alt="Морозиво"
+                                srcset="./images/480/modal-header/first@1x.png 1x, ./images/480/modal-header/first@2x.png 2x">
                         </span>
-                        <span class="modal__ellipse"></span>
-                        <span class="modal__subtitle">ice
+                        <span class="header-modal__ellipse header-modal__ellipse--icecream"></span>
+                        <span class="header-modal__subtitle">ice
                             cream</span></label>
                 </li>
-                <li class="modal__item">
-                    <input class="modal__checkbox visually-hidden" type="checkbox" name="icecoffee" id="icecoffee"
-                        value="icecoffee">
-                    <label class="modal__label modal__label--icecoffee" for="icecoffee">
-                        <span class="modal__image">
-                            <img src="" alt="" srcset="">
+                <li class="header-modal__item">
+                    <input class="header-modal__checkbox visually-hidden" type="checkbox" name="icecoffee"
+                        id="icecoffee" value="icecoffee">
+                    <label class="header-modal__label header-modal__label--icecoffee" for="icecoffee">
+                        <span class="header-modal__image">
+                            <img src="./images/480/modal-header/second@1x.png" alt="Айс кава"
+                                srcset="./images/480/modal-header/second@1x.png 1x, ./images/480/modal-header/second@2x.png 2x">
                         </span>
-                        <span class="modal__ellipse"></span>
-                        <span class="modal__subtitle">ice coffee</span></label>
+                        <span class="header-modal__ellipse header-modal__ellipse--icecoffee"></span>
+                        <span class="header-modal__subtitle">ice coffee</span></label>
                 </li>
-                <li class="modal__item">
-                    <input class="modal__checkbox visually-hidden" type="checkbox" name="milkshake" id="milkshake"
-                        value="milkshake">
-                    <label class="modal__label modal__label--milkshake" for="milkshake">
-                        <span class="modal__image">
-                            <img src="" alt="" srcset="">
+                <li class="header-modal__item">
+                    <input class="header-modal__checkbox visually-hidden" type="checkbox" name="milkshake"
+                        id="milkshake" value="milkshake">
+                    <label class="header-modal__label header-modal__label--milkshake" for="milkshake">
+                        <span class="header-modal__image">
+                            <img src="./images/480/modal-header/third@1x.png" alt="Молочний коктейль"
+                                srcset="./images/480/modal-header/third@1x.png 1x, ./images/480/modal-header/third@2x.png 2x">
                         </span>
-                        <span class="modal__ellipse"></span>
-                        <span class="modal__subtitle">milkshake</span></label>
+                        <span class="header-modal__ellipse header-modal__ellipse--milkshake"></span>
+                        <span class="header-modal__subtitle">milkshake</span></label>
                 </li>
             </ul>
+
+            <!-- Modal form-inputs -->
+
+            <input class="header-modal__input" type="text" name="username" placeholder="Name">
+            <input class="header-modal__input" type="tel" name="usertel" placeholder="Phone">
+            <textarea class="header-modal__input header-modal__input--textarea" name="comment"
+                placeholder="Comment"></textarea>
+
+            <!-- Modal submit button -->
+
+            <button class="header-modal__button" type="submit">Submit</button>
         </form>
     </div>
 </div>
