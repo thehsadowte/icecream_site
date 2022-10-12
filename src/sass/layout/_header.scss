@@ -167,7 +167,7 @@ header {
     left: 100%;
     width: 100%;
     height: 100vh;
-    overflow-y: scroll;
+    // overflow-y: scroll;
 
     padding-top: 100px;
     padding-bottom: 63px;
@@ -194,7 +194,6 @@ header {
         align-items: center;
         opacity: 1;
         flex-direction: row;
-        overflow-y: auto;
     }
 }
 
@@ -295,7 +294,8 @@ header {
 
 
     padding: 28px 30px;
-    width: 280px;
+    max-width: 280px;
+    width: 100%;
     height: 986px;
 
     background: $text-white-color;
@@ -309,7 +309,8 @@ header {
         top: 50%;
         transform: translate(-50%, -50%);
         padding: 32px 54px;
-        width: 568px;
+        max-width: 568px;
+        width: 100%;
         height: 644px;
         overflow-y: hidden;
     }
@@ -406,6 +407,7 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    transition: background-color linear 200ms;
 
     cursor: pointer;
 
