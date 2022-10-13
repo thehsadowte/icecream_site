@@ -1,3 +1,4 @@
+const backdropModal = document.querySelectorAll('.backdrop');
 const refs = [
   {
     openModalBtn: document.querySelector('[data-location-open]'),
@@ -50,3 +51,12 @@ function handleModal({ openModalBtn, closeModalBtn, modal }) {
 }
 
 refs.forEach(handleModal);
+
+//bakcdrops modal
+
+backdropModal.forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.add('is-hidden');
+    document.body.classList.remove('overflow');
+  });
+});
