@@ -146,9 +146,9 @@
 .about__text-container {
   position: relative;
   margin-left: 50px;
-  margin-right: 50px;
+
   min-width: 220px;
-  margin-bottom: 42px;
+  padding-bottom: 42px;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -167,8 +167,8 @@
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
-    margin-top: 100px;
-    margin-right: 105px;
+    padding-top: 100px;
+
     margin-left: 100px;
   }
 }

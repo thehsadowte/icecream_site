@@ -1,7 +1,11 @@
 .gallary {
   position: relative;
   margin: 0 auto;
-  max-width: 280px;
+
+
+  @media screen and (min-width:480px) {
+    max-width: 280px;
+  }
 
   @media screen and (min-width:768px) {
     max-width: 704px;
