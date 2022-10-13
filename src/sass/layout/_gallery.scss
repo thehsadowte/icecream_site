@@ -37,14 +37,21 @@
   top: 50%;
   left: 50%;
 
-  padding: 32px 60px;
-  max-width: 568px;
+  padding: 26px 18px;
+  max-width: 280px;
   width: 100%;
 
   background-color: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
   transform: translate(-50%, -50%);
+
+
+
+  @media screen and (min-width:768px) {
+    max-width: 568px;
+    padding: 32px 60px;
+  }
 }
 
 .modal-location__container {
@@ -54,6 +61,11 @@
   align-items: center;
 }
 
+.modal-location__map {
+  width: 100%;
+  margin: 32px 0;
+}
+
 .modal-location__headline {
   font-size: 20px;
   font-family: $seymour-one;
@@ -61,5 +73,21 @@
 
 .modal-location__iframe {
   border: none;
-  margin: 32px 0;
+  width: 100%;
+  height: 199px;
+  border-radius: 10px;
+
+  @media screen and (min-width:768px) {
+    height: 260px;
+  }
+}
+
+.modal__location-close {
+  top: 8px;
+  right: 8px;
+
+  @media screen and (min-width:768px) {
+    top: 20px;
+    right: 20px;
+  }
 }

@@ -12,6 +12,13 @@ const refs = [
     body: document.body,
   },
   {
+    openModalBtn: document.querySelector('[data-header-modal-open1]'),
+    openModalBtn: document.querySelector('[data-header-modal-open-2]'),
+    closeModalBtn: document.querySelector('[data-header-modal-close]'),
+    modal: document.querySelector('[data-header-modal]'),
+    body: document.body,
+  },
+  {
     openModalBtn: document.querySelector('[data-about-open]'),
     closeModalBtn: document.querySelector('[data-about-close]'),
     modal: document.querySelector('[data-modal-about]'),
