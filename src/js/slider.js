@@ -1,6 +1,6 @@
-import Swiper, { Autoplay, Pagination, EffectFade } from 'swiper';
+import Swiper, { Pagination, Autoplay, EffectFade } from 'swiper';
 
-Swiper.use([Autoplay, Pagination, EffectFade]);
+Swiper.use([Pagination, Autoplay, EffectFade]);
 
 const swiper = new Swiper('.gallary', {
   direction: 'horizontal',
