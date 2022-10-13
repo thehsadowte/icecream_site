@@ -2,6 +2,15 @@
   background-color: $green-color;
   font-family: $montserrat;
   color: $text-white-color;
+  padding-bottom: 42px;
+
+  @media screen and(min-width: 768px) {
+    padding-bottom: 67px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    padding-bottom: 79px;
+  }
 }
 
 .about__title {
@@ -11,6 +20,7 @@
   line-height: calc(38 / 30);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+
   @media only screen and (max-width: 767px) {
     max-width: 210px;
   }
@@ -73,7 +83,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
   }
 }
 
@@ -82,11 +92,9 @@
   margin-right: auto;
   width: 278px;
   height: 278px;
-  background: linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(248, 210, 78, 0.7),
-      rgba(248, 210, 78, 0.7)
-    ),
+      rgba(248, 210, 78, 0.7)),
     #d9d9d9;
   position: relative;
   margin-bottom: 62px;
@@ -197,6 +205,7 @@
     display: block;
     text-align: left;
   }
+
   @media screen and (min-width: 1200px) {
     display: block;
     text-align: left;
@@ -232,6 +241,7 @@
     background-color: #0a8817;
     color: $text-white-color;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
     .arrow-icon {
       stroke: #fff;
     }
@@ -255,78 +265,9 @@
   transition: stroke 250ms ease-out;
 }
 
-.about__icons {
-  padding-bottom: 36px;
-
-  @media screen and(min-width: 768px) {
-    margin-top: 49px;
-  }
-  @media screen and(min-width: 1200px) {
-    margin-top: 100px;
-  }
-}
-
-.icons__svg {
-  height: 50px;
-  width: 50px;
-
-  transition: drop-shadow 250ms ease-in-out;
-
-  &:hover {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
-}
-
-.icons__list {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    gap: 80px;
-  }
-}
-
-.icons__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 17px;
-  margin-bottom: 27px;
-}
-
-.icons__numbers {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: calc(42 / 36);
-
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-
-  color: #fcfcfc;
-
-  @media screen and (min-width: 768px) {
-    font-size: 48px;
-    line-height: calc(59 / 48);
-  }
-
-  @media screen and (min-width: 1200px) {
-    font-size: 58px;
-    line-height: calc(71 / 58);
-  }
-}
-
-.icons__text {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: calc(20.4 / 12);
-
-  text-align: center;
-
-  color: #fcfcfc;
-}
-
+/*=============================================
+=        Modal About (Read more)             =
+=============================================*/
 .backdrop {
   position: fixed;
   width: 100%;
@@ -350,6 +291,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
 
   display: flex;
   flex-direction: column;
@@ -393,6 +336,12 @@
   cursor: pointer;
   border: none;
   background-color: #fff;
+
+  transition: fill .25s ease-in;
+
+  &:hover {
+    fill: $accent-color;
+  }
 }
 
 .modal__video {
@@ -400,6 +349,7 @@
   border-radius: 10px;
   width: 224px;
   height: 199px;
+
   @media screen and(min-width:768px) {
     width: 448px;
     height: 205px;
