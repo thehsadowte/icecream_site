@@ -11,8 +11,15 @@ const refs = [
     modal: document.querySelector('[data-modal-products]'),
     body: document.body,
   },
+  ////////////////////////////////
   {
     openModalBtn: document.querySelector('[data-header-modal-open1]'),
+    closeModalBtn: document.querySelector('[data-header-modal-close1]'),
+    modal: document.querySelector('[data-header-modal1]'),
+    body: document.body,
+  },
+  ///////////////////////////////
+  {
     openModalBtn: document.querySelector('[data-header-modal-open-2]'),
     closeModalBtn: document.querySelector('[data-header-modal-close]'),
     modal: document.querySelector('[data-header-modal]'),
