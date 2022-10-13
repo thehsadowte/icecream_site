@@ -16,6 +16,11 @@ html {
   scroll-behavior: smooth;
 }
 
+a,
+button {
+  outline: transparent;
+}
+
 a {
   text-decoration: none;
 }
