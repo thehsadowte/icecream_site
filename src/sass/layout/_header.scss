@@ -78,7 +78,7 @@ header {
     line-height: calc(39/32);
 
     color: $text-white-color;
-    transition: color linear 200ms;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 
     &:focus,
     &:hover {
@@ -110,7 +110,7 @@ header {
     cursor: pointer;
     background-color: transparent;
     border-color: transparent;
-    transition: color linear 200ms;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 
     &:focus,
     &:hover {
@@ -177,7 +177,7 @@ header {
 
     background-color: $green-color;
     opacity: 0;
-    transition: transform linear 250ms 50ms, opacity linear 250ms 50ms;
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 250ms 50ms, opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms 50ms;
 
     @media screen and (min-width:768px) {
         padding-top: 140px;
@@ -225,7 +225,7 @@ header {
     cursor: pointer;
     background-color: $accent-color;
     border: transparent;
-    transition: color linear 200ms, background-color linear 200ms;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1) 200ms, background-color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 
     &:hover {
         background-color: $green-btn-color;
@@ -261,4 +261,347 @@ header {
 
     fill: none;
     stroke: currentColor;
+}
+
+
+// MODAL HEADER
+
+
+
+.header__backdrop {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+    overflow-y: scroll;
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+.header-modal {
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translatex(-50%) scale(1);
+
+
+    padding: 28px 30px;
+    max-width: 280px;
+    width: 100%;
+    height: 986px;
+
+    background: $text-white-color;
+    border: 2px solid $accent-color;
+    border-radius: 10px;
+    // overflow-y: scroll;
+    transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+
+    @media screen and (min-width:768px) {
+        padding: 32px 54px;
+        max-width: 568px;
+        width: 100%;
+        height: 644px;
+        overflow-y: hidden;
+    }
+
+    @media screen and (min-width:1200px) {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .header__backdrop.is-hidden & {
+        opacity: 0;
+    }
+}
+
+.header-modal__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// Modal close button
+
+.header-modal__close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 16px;
+    height: 16px;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+
+    @media screen and(min-width:768px) {
+        top: 20px;
+        right: 20px;
+    }
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.header-modal__icon {
+    display: block;
+    width: 11px;
+    height: 11px;
+    fill: currentColor;
+}
+
+// Modal title
+
+.header-modal__title {
+    margin-bottom: 84px;
+
+    font-family: $seymour-one;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24/16);
+    text-align: center;
+
+    color: $text-black-color;
+
+    @media screen and(min-width:768px) {
+        font-size: 20;
+        line-height: calc(28/20);
+        margin-bottom: 103px;
+    }
+}
+
+// Modal checkboxes with pictures
+
+.header-modal__list {
+    margin-bottom: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 84px;
+
+    @media screen and(min-width:768px) {
+        flex-direction: row;
+        gap: 32px;
+        margin-bottom: 40px;
+    }
+}
+
+.header-modal__label {
+    position: relative;
+    width: 132px;
+    height: 136px;
+    padding-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    &--icecream {
+        border: 2px solid #96AF8C;
+        filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+        border-radius: 15.7808px;
+
+        .header-modal__checkbox:checked+& {
+            background-color: #96af8c;
+
+        }
+    }
+
+    &--icecoffee {
+        border: 2px solid $yellow-product-color;
+        box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+        border-radius: 15.7808px;
+
+        .header-modal__checkbox:checked+& {
+            background-color: $yellow-product-color;
+
+        }
+    }
+
+    &--milkshake {
+        border: 2px solid $burgundy-product-color;
+        filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+        border-radius: 15.7808px;
+
+        .header-modal__checkbox:checked+& {
+            background-color: $burgundy-product-color;
+
+        }
+    }
+}
+
+.header-modal__image {
+    position: absolute;
+    top: calc(-50% - 7px);
+    z-index: 1;
+    width: 132px;
+}
+
+.header-modal__ellipse {
+    position: absolute;
+    top: -50%;
+
+    width: 132px;
+    height: 132px;
+
+    border-radius: 50%;
+
+    &--icecream {
+        background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+        box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+    }
+
+    &--icecoffee {
+        background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+        box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+    }
+
+    &--milkshake {
+        background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+        box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.header-modal__subtitle {
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(20/16);
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $text-black-color;
+}
+
+// Modal form-inputs
+
+.header-modal__input {
+    width: 100%;
+    padding: 7px 12px;
+    margin-bottom: 12px;
+
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(17/12);
+
+    color: $text-black-color;
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid #84A178;
+    border-radius: 10px;
+    transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 200ms, border-color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+    outline: transparent;
+
+    @media screen and(min-width:768px) {
+        font-size: 14;
+        line-height: calc(20/14);
+        padding: 11px 16px;
+        margin-bottom: 16px;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    &--textarea {
+        margin-bottom: 24px;
+        height: 65px;
+        resize: none;
+
+        @media screen and(min-width:768px) {
+            height: 84px;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+// Modal submit button
+
+.header-modal__button {
+    padding: 13px 34px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(15/12);
+
+    color: $text-black-color;
+    background: $accent-color;
+    border-radius: 10px;
+    border: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1) 200ms, background-color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+
+    @media screen and(min-width:768px) {
+        font-size: 14;
+        line-height: calc(17/14);
+    }
+
+    &:hover {
+        background-color: $green-btn-color;
+        color: $text-black-color;
+    }
+
+    &:focus {
+        background-color: $green-btn-color;
+        color: $text-white-color;
+    }
+
+    &:disabled {
+        background-color: $grey-btn-color;
+        color: $text-black-color;
+    }
+}
+
+
+
+// ANIMATIONS
+
+@keyframes shadow-drop-center {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
 }

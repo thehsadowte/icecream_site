@@ -1,0 +1,183 @@
+<div class="header__backdrop is-hidden" data-header-modal data-header-modal1>
+  <div class="header-modal">
+    <form class="header-modal__form" autocomplete="on">
+      <!-- Modal close button -->
+
+      <button
+        class="header-modal__close-button"
+        type="button"
+        data-header-modal-close
+      >
+        <svg class="header-modal__icon">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+      <button
+        class="header-modal__close-button"
+        type="button"
+        data-header-modal-close1
+      >
+        <svg class="header-modal__icon">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+      <!-- Modal title -->
+
+      <p class="header-modal__title">Buy now</p>
+
+      <!-- Modal checkboxes with pictures -->
+
+      <ul class="header-modal__list">
+        <li class="header-modal__item">
+          <input
+            class="header-modal__checkbox visually-hidden"
+            type="checkbox"
+            name="icecream"
+            id="icecream"
+            value="icecream"
+          />
+          <label
+            class="header-modal__label header-modal__label--icecream"
+            for="icecream"
+          >
+            <span class="header-modal__image">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/480/modal-header/first@1x.webp 1x,
+                    ./images/480/modal-header/first@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/png"
+                  srcset="
+                    ./images/480/modal-header/first@1x.png 1x,
+                    ./images/480/modal-header/first@2x.png 2x
+                  "
+                />
+                <img
+                  src="./images/480/modal-header/first@1x.png"
+                  alt="Ice cream"
+                  loading="lazy"
+                />
+              </picture>
+            </span>
+            <span
+              class="header-modal__ellipse header-modal__ellipse--icecream"
+            ></span>
+            <span class="header-modal__subtitle">ice cream</span></label
+          >
+        </li>
+        <li class="header-modal__item">
+          <input
+            class="header-modal__checkbox visually-hidden"
+            type="checkbox"
+            name="icecoffee"
+            id="icecoffee"
+            value="icecoffee"
+          />
+          <label
+            class="header-modal__label header-modal__label--icecoffee"
+            for="icecoffee"
+          >
+            <span class="header-modal__image">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/480/modal-header/second@1x.webp 1x,
+                    ./images/480/modal-header/second@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/png"
+                  srcset="
+                    ./images/480/modal-header/second@1x.png 1x,
+                    ./images/480/modal-header/second@2x.png 2x
+                  "
+                />
+                <img
+                  src="./images/480/modal-header/second@1x.png"
+                  alt="Ice coffee"
+                  loading="lazy"
+                />
+              </picture>
+            </span>
+            <span
+              class="header-modal__ellipse header-modal__ellipse--icecoffee"
+            ></span>
+            <span class="header-modal__subtitle">ice coffee</span></label
+          >
+        </li>
+        <li class="header-modal__item">
+          <input
+            class="header-modal__checkbox visually-hidden"
+            type="checkbox"
+            name="milkshake"
+            id="milkshake"
+            value="milkshake"
+          />
+          <label
+            class="header-modal__label header-modal__label--milkshake"
+            for="milkshake"
+          >
+            <span class="header-modal__image">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/480/modal-header/third@1x.webp 1x,
+                    ./images/480/modal-header/third@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/png"
+                  srcset="
+                    ./images/480/modal-header/third@1x.png 1x,
+                    ./images/480/modal-header/third@2x.png 2x
+                  "
+                />
+                <img
+                  src="./images/480/modal-header/third@1x.png"
+                  alt="Ice coffee"
+                  loading="lazy"
+                />
+              </picture>
+            </span>
+            <span
+              class="header-modal__ellipse header-modal__ellipse--milkshake"
+            ></span>
+            <span class="header-modal__subtitle">milkshake</span></label
+          >
+        </li>
+      </ul>
+
+      <!-- Modal form-inputs -->
+
+      <input
+        class="header-modal__input"
+        type="text"
+        name="username"
+        placeholder="Name"
+        required
+      />
+      <input
+        class="header-modal__input"
+        type="tel"
+        name="usertel"
+        placeholder="Phone"
+        required
+      />
+      <textarea
+        class="header-modal__input header-modal__input--textarea"
+        name="comment"
+        placeholder="Comment"
+      ></textarea>
+
+      <!-- Modal submit button -->
+
+      <button class="header-modal__button" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
