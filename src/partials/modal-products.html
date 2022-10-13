@@ -1,33 +1,54 @@
-<div class="backdrop is-hidden" data-modal-products>
-  <div class="modal-products">
-    <button type="button" class="modal-products__close-btn modal__close--yellow" data-products-close>
+<div class="backdrop is-hidden" data-modal-icecream>
+  <div class="modal-products modal-products--icecream">
+    <button
+      type="button"
+      class="modal-products__close-btn modal__close--yellow"
+      data-icecream-close
+    >
       <svg class="modal-products__icon" width="11" height="11">
         <use href="./images/icons.svg#close"></use>
       </svg>
     </button>
     <h2 class="modal-products__title">Chololate icecream</h2>
-    <div class="modal-products__img-wrap">
-      <img class="modal-products__img" srcset="
-          ./images/480/products/modal@1x.png 1x,
-          ./images/480/products/modal@2x.png 2x
-        " src="./images/480/products/modal@1x.png" alt="ice cream" width="131" height="131" loading="lazy" />
+    <div class="modal-products__img-wrap modal-products__img-wrap--icecream">
+      <picture class="modal-products__img">
+        <source
+          type="image/webp"
+          srcset="
+            ./images/480/modal-header/first@1x.webp 1x,
+            ./images/480/modal-header/first@2x.webp 2x
+          "
+        />
+        <source
+          type="image/png"
+          srcset="
+            ./images/480/modal-header/first@1x.png 1x,
+            ./images/480/modal-header/first@2x.png 2x
+          "
+        />
+        <img
+          src="./images/480/modal-header/first@1x.png"
+          alt="Ice cream"
+          loading="lazy"
+        />
+      </picture>
     </div>
     <ul class="info">
-      <li class="info__item">
+      <li class="info__item info__item--icecream">
         kcal
-        <p class="info__descr">320</p>
+        <p class="info__descr info__descr--icecream">320</p>
       </li>
-      <li class="info__item">
+      <li class="info__item info__item--icecream">
         Prote...
-        <p class="info__descr">4g</p>
+        <p class="info__descr info__descr--icecream">4g</p>
       </li>
-      <li class="info__item">
+      <li class="info__item info__item--icecream">
         Fats
-        <p class="info__descr">8,2g</p>
+        <p class="info__descr info__descr--icecream">8,2g</p>
       </li>
-      <li class="info__item">
+      <li class="info__item info__item--icecream">
         Carbs
-        <p class="info__descr">40,4g</p>
+        <p class="info__descr info__descr--icecream">40,4g</p>
       </li>
     </ul>
     <p class="modal__subtitle">Ingredients</p>
@@ -59,12 +80,242 @@
     </ul>
     <form name="products-form">
       <label class="products-form__label">
-        <input class="products-form__input" type="text" name="username" placeholder="Name" /></label>
+        <input
+          class="products-form__input"
+          type="text"
+          name="username"
+          placeholder="Name"
+      /></label>
       <label class="products-form__label">
-        <input class="products-form__input" type="tel" name="phone" placeholder="Phone" /></label>
+        <input
+          class="products-form__input"
+          type="tel"
+          name="phone"
+          placeholder="Phone"
+      /></label>
       <label class="products-form__label">
-        <textarea class="products-form__input products-form__input--textarea" name="comment"
-          placeholder="Comment"></textarea>
+        <textarea
+          class="products-form__input products-form__input--textarea"
+          name="comment"
+          placeholder="Comment"
+        ></textarea>
+      </label>
+      <button class="products-form__btn main-btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Coffee -->
+<div class="backdrop is-hidden" data-modal-coffee>
+  <div class="modal-products modal-products--coffee">
+    <button
+      type="button"
+      class="modal-products__close-btn modal__close--yellow"
+      data-coffee-close
+    >
+      <svg class="modal-products__icon" width="11" height="11">
+        <use href="./images/icons.svg#close"></use>
+      </svg>
+    </button>
+    <h2 class="modal-products__title">Ice coffee</h2>
+    <div class="modal-products__img-wrap modal-products__img-wrap--coffee">
+      <picture class="modal-products__img">
+        <source
+          type="image/webp"
+          srcset="
+            ./images/480/modal-header/second@1x.webp 1x,
+            ./images/480/modal-header/second@2x.webp 2x
+          "
+        />
+        <source
+          type="image/png"
+          srcset="
+            ./images/480/modal-header/second@1x.png 1x,
+            ./images/480/modal-header/second@2x.png 2x
+          "
+        />
+        <img
+          src="./images/480/modal-header/second@1x.png"
+          alt="Ice coffee"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+    <ul class="info">
+      <li class="info__item info__item--coffee">
+        kcal
+        <p class="info__descr info__descr--coffee">320</p>
+      </li>
+      <li class="info__item info__item--coffee">
+        Prote...
+        <p class="info__descr info__descr--coffee">4g</p>
+      </li>
+      <li class="info__item info__item--coffee">
+        Fats
+        <p class="info__descr info__descr--coffee">8,2g</p>
+      </li>
+      <li class="info__item info__item--coffee">
+        Carbs
+        <p class="info__descr info__descr--coffee">40,4g</p>
+      </li>
+    </ul>
+    <p class="modal__subtitle">Ingredients</p>
+    <ul class="ingredients">
+      <li class="ingredients__item">
+        <p class="ingredients__text">Milk</p>
+        <p class="ingredients__text">100ml</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Chocolate</p>
+        <p class="ingredients__text">20g</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Cream</p>
+        <p class="ingredients__text">150 ml</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Coffee</p>
+        <p class="ingredients__text">10g</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Sugar</p>
+        <p class="ingredients__text">40g</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Vanilla sugar</p>
+        <p class="ingredients__text">10g</p>
+      </li>
+    </ul>
+    <form name="products-form">
+      <label class="products-form__label">
+        <input
+          class="products-form__input"
+          type="text"
+          name="username"
+          placeholder="Name"
+      /></label>
+      <label class="products-form__label">
+        <input
+          class="products-form__input"
+          type="tel"
+          name="phone"
+          placeholder="Phone"
+      /></label>
+      <label class="products-form__label">
+        <textarea
+          class="products-form__input products-form__input--textarea"
+          name="comment"
+          placeholder="Comment"
+        ></textarea>
+      </label>
+      <button class="products-form__btn main-btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Milkshakes -->
+
+<div class="backdrop is-hidden" data-modal-milkshake>
+  <div class="modal-products">
+    <button
+      type="button"
+      class="modal-products__close-btn modal__close--yellow"
+      data-milkshake-close
+    >
+      <svg class="modal-products__icon" width="11" height="11">
+        <use href="./images/icons.svg#close"></use>
+      </svg>
+    </button>
+    <h2 class="modal-products__title">Milkshake</h2>
+    <div class="modal-products__img-wrap modal-products__img-wrap--milkshake">
+      <picture class="modal-products__img">
+        <source
+          type="image/webp"
+          srcset="
+            ./images/480/modal-header/third@1x.webp 1x,
+            ./images/480/modal-header/third@2x.webp 2x
+          "
+        />
+        <source
+          type="image/png"
+          srcset="
+            ./images/480/modal-header/third@1x.png 1x,
+            ./images/480/modal-header/third@2x.png 2x
+          "
+        />
+        <img
+          src="./images/480/modal-header/third@1x.png"
+          alt="Ice coffee"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+    <ul class="info">
+      <li class="info__item info__item--milkshake">
+        kcal
+        <p class="info__descr info__descr--milkshake">320</p>
+      </li>
+      <li class="info__item info__item--milkshake">
+        Prote...
+        <p class="info__descr info__descr--milkshake">4g</p>
+      </li>
+      <li class="info__item info__item--milkshake">
+        Fats
+        <p class="info__descr info__descr--milkshake">8,2g</p>
+      </li>
+      <li class="info__item info__item--milkshake">
+        Carbs
+        <p class="info__descr info__descr--milkshake">40,4g</p>
+      </li>
+    </ul>
+    <p class="modal__subtitle">Ingredients</p>
+    <ul class="ingredients">
+      <li class="ingredients__item">
+        <p class="ingredients__text">Milk</p>
+        <p class="ingredients__text">100ml</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Belgian chocolate</p>
+        <p class="ingredients__text">20g</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Cream</p>
+        <p class="ingredients__text">150 ml</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Cocoa powder</p>
+        <p class="ingredients__text">30g</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Sugar</p>
+        <p class="ingredients__text">40g</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__text">Vanilla sugar</p>
+        <p class="ingredients__text">10g</p>
+      </li>
+    </ul>
+    <form name="products-form">
+      <label class="products-form__label">
+        <input
+          class="products-form__input"
+          type="text"
+          name="username"
+          placeholder="Name"
+      /></label>
+      <label class="products-form__label">
+        <input
+          class="products-form__input"
+          type="tel"
+          name="phone"
+          placeholder="Phone"
+      /></label>
+      <label class="products-form__label">
+        <textarea
+          class="products-form__input products-form__input--textarea"
+          name="comment"
+          placeholder="Comment"
+        ></textarea>
       </label>
       <button class="products-form__btn main-btn" type="submit">Submit</button>
     </form>
