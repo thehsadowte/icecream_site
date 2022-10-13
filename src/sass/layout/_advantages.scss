@@ -2,11 +2,12 @@
   background-color: $green-color;
   font-family: $montserrat;
   color: $text-white-color;
+
+  padding-bottom: 86px;
+
 }
 
-.about__icons {
-  padding-bottom: 36px;
-}
+
 
 .icons__svg {
   height: 50px;
@@ -31,20 +32,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 17px;
-  margin-bottom: 27px;
+  //gap: 17px;
+  //margin-bottom: 27px;
 }
 
 .icons__numbers {
-  font-family: 'Roboto';
-  font-style: normal;
+  margin-top: 40px;
+  margin-bottom: 16px;
+
+  font-family: $montserrat;
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
 
   text-align: center;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
+
 
   color: #fcfcfc;
 
@@ -60,7 +63,8 @@
 }
 
 .icons__text {
-  font-weight: 700;
+  max-width: 340px;
+  font-weight: 400;
   font-size: 12px;
   line-height: calc(20.4 / 12);
 

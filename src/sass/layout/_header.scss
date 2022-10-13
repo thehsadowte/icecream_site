@@ -5,6 +5,16 @@ header {
     overflow-x: clip;
 
     background-color: $green-color;
+    padding-top: 12px;
+
+    @media screen and (min-width:768px) {
+        padding-top: 20px;
+
+    }
+
+    @media screen and (min-width:1200px) {
+        padding-top: 8px;
+    }
 }
 
 
@@ -13,17 +23,10 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding-top: 12px;
-
     @media screen and (min-width:768px) {
-        padding-top: 20px;
+
         justify-content: flex-start;
     }
-
-    @media screen and (min-width:1200px) {
-        padding-top: 8px;
-    }
-
 }
 
 .header__logo {
