@@ -332,6 +332,10 @@
   cursor: pointer;
   border: none;
   background-color: #fff;
+
+  &:hover {
+    fill: $accent-color;
+  }
 }
 
 .modal__video {
