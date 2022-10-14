@@ -54,9 +54,4 @@ refs.forEach(handleModal);
 
 //bakcdrops modal
 
-backdropModal.forEach(item => {
-  item.addEventListener('click', () => {
-    item.classList.add('is-hidden');
-    document.body.classList.remove('overflow');
-  });
-});
+
