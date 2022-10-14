@@ -7,19 +7,19 @@
   background-repeat: no-repeat;
 
   background-image:
-    linear-gradient(180deg, $green-color 25px, rgba(0, 0, 0, 0) 25px), url('/src/images/1200/gallary/bg-@1x.png');
+    linear-gradient(180deg, $green-color 25px, rgba(0, 0, 0, 0) 25px), url('../images/480/products/bg@1x.webp');
 
   @media screen and (min-width:768px) {
     padding-bottom: 384px;
     background-image:
-      linear-gradient(180deg, $green-color 161px, rgba(0, 0, 0, 0) 161px), url('/src/images/1200/gallary/bg-@1x.png');
+      linear-gradient(180deg, $green-color 161px, rgba(0, 0, 0, 0) 161px), url('../images/768/products/bg@1x.webp');
 
   }
 
   @media screen and (min-width:1200px) {
     padding-bottom: 196px;
     background-image:
-      linear-gradient(180deg, $green-color 95px, rgba(0, 0, 0, 0) 95px), url('/src/images/1200/gallary/bg-@1x.png');
+      linear-gradient(180deg, $green-color 95px, rgba(0, 0, 0, 0) 95px), url('../images/1200/products/bg@1x.webp');
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -27,7 +27,7 @@
   (min-resolution: 2dppx) {
     .gallery-reviews {
       background-image:
-        linear-gradient(180deg, $green-color 95px, rgba(0, 0, 0, 0) 95px), url('/src/images/1200/gallary/@2x/bg-@2x.png');
+        linear-gradient(180deg, $green-color 95px, rgba(0, 0, 0, 0) 95px), url('../images/480/products/bg@1x.webp');
     }
   }
 }
