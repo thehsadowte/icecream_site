@@ -108,3 +108,11 @@
 .swiper-pagination-bullet-active {
   background-color: $green-color;
 }
+
+.modal__close--yellow {
+  transition: fill .25s ease-in;
+
+  &:hover {
+    fill: $accent-color;
+  }
+}

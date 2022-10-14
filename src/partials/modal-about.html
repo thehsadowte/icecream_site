@@ -1,8 +1,12 @@
 <div class="backdrop is-hidden" data-modal-about>
   <div class="about__modal">
-    <button class="modal__close" data-about-close>
-      <svg class="close-btn">
-        <use href="./images/icons.svg#icon-close_btn"></use>
+    <button
+      type="button"
+      class="modal-franchise__close-btn modal__close--yellow"
+      data-about-close
+    >
+      <svg class="modal-franchise__icon" width="11" height="11">
+        <use href="./images/icons.svg#close"></use>
       </svg>
     </button>
     <h1 class="modal__caption">How it's made?</h1>
@@ -14,6 +18,7 @@
       title="Ой у лузі червона калина"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
+      loading="lazy"
     ></iframe>
     <p class="modal__text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
