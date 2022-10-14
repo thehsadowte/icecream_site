@@ -170,7 +170,7 @@ header {
     left: 100%;
     width: 100%;
     height: 100vh;
-    overflow-y: scroll;
+    overflow: hidden;
 
     padding-top: 100px;
     padding-bottom: 63px;
@@ -185,6 +185,7 @@ header {
     @media screen and (min-width:768px) {
         padding-top: 140px;
         padding-bottom: 0;
+        padding-right: 15px;
     }
 
     @media screen and (min-width:1200px) {
@@ -197,7 +198,7 @@ header {
         align-items: center;
         opacity: 1;
         flex-direction: row;
-        overflow-y: auto;
+        padding-right: 15px;
     }
 }
 
@@ -229,6 +230,7 @@ header {
     background-color: $accent-color;
     border: transparent;
     transition: color cubic-bezier(0.4, 0, 0.2, 1) 200ms, background-color cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+    animation: pulsate-fwd 2s ease-in-out 1s infinite both;
 
     &:hover {
         background-color: $green-btn-color;
@@ -606,5 +608,20 @@ header {
 
     100% {
         box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+
+@keyframes pulsate-fwd {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
