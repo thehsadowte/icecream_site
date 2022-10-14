@@ -7,21 +7,9 @@ const refs = [
     body: document.body,
   },
   {
-    openModalBtn: document.querySelector('[data-icecream-open]'),
-    closeModalBtn: document.querySelector('[data-icecream-close]'),
-    modal: document.querySelector('[data-modal-icecream]'),
-    body: document.body,
-  },
-  {
-    openModalBtn: document.querySelector('[data-coffee-open]'),
-    closeModalBtn: document.querySelector('[data-coffee-close]'),
-    modal: document.querySelector('[data-modal-coffee]'),
-    body: document.body,
-  },
-  {
-    openModalBtn: document.querySelector('[data-milkshake-open]'),
-    closeModalBtn: document.querySelector('[data-milkshake-close]'),
-    modal: document.querySelector('[data-modal-milkshake]'),
+    openModalBtn: document.querySelector('[data-products-open]'),
+    closeModalBtn: document.querySelector('[data-products-close]'),
+    modal: document.querySelector('[data-modal-products]'),
     body: document.body,
   },
   ////////////////////////////////
