@@ -170,7 +170,7 @@ header {
     left: 100%;
     width: 100%;
     height: 100vh;
-    overflow-y: scroll;
+    overflow: hidden;
 
     padding-top: 100px;
     padding-bottom: 63px;
@@ -185,6 +185,7 @@ header {
     @media screen and (min-width:768px) {
         padding-top: 140px;
         padding-bottom: 0;
+        padding-right: 15px;
     }
 
     @media screen and (min-width:1200px) {
@@ -197,7 +198,7 @@ header {
         align-items: center;
         opacity: 1;
         flex-direction: row;
-        overflow-y: auto;
+        padding-right: 15px;
     }
 }
 
