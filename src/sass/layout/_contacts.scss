@@ -228,7 +228,7 @@
     width: 196px;
     height: 42px;
     transition: background linear 200ms, color linear 200ms;
-
+    stroke: black;
     &:hover {
         background: $green-btn-color;
     }
@@ -244,6 +244,7 @@
 }
 
 .contacts__franchise-btn {
+    stroke: black;
     border: 2px solid $accent-color;
     border-radius: 10px;
     background: transparent;
