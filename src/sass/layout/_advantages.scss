@@ -4,10 +4,7 @@
   color: $text-white-color;
 
   padding-bottom: 86px;
-
 }
-
-
 
 .icons__svg {
   height: 50px;
@@ -48,6 +45,30 @@
   text-align: center;
   letter-spacing: 0.04em;
 
+  color: #fcfcfc;
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: calc(59 / 48);
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+    line-height: calc(71 / 58);
+  }
+}
+
+.icons__numbers-weight {
+  margin-top: 40px;
+  margin-bottom: 16px;
+
+  font-family: $montserrat;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+
+  text-align: center;
+  letter-spacing: 0.04em;
 
   color: #fcfcfc;
 
@@ -59,6 +80,11 @@
   @media screen and (min-width: 1200px) {
     font-size: 58px;
     line-height: calc(71 / 58);
+  }
+
+  &::after {
+    content: 'kg';
+    color: #fff;
   }
 }
 
